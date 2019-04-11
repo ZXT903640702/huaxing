@@ -53,9 +53,11 @@
             </div>
             <!--导航、菜单-->
             <div class="header_bottom max_wh clearfix">
-                <div class="yuyue float_lf clearfix">
-                    <p class="float_lf">在线预约</p>
-                    <img class="float_rt" src="img/down_w.png" alt="">
+                <div class="yuyue float_lf">
+                    <a class="clearfix display-block" href="javascript:;">
+                        <p class="float_lf">在线预约</p>
+                        <img class="float_rt" src="img/down_w.png" alt="">
+                    </a>
                 </div>
                 <ul class="float_rt clearfix">
                     <li><a href="#">网站首页</a></li>
@@ -67,7 +69,41 @@
                             </p>
                         </a>
                         <!--隐藏菜单-->
-                        <!--<div></div>-->
+                        <div class="hide_nav">
+                            <div class="nav_item">
+                                <a class="clearfix display-block" href="javascript:;">
+                                    <span class="float_lf">华星介绍</span>
+                                    <img class="float_rt" src="img/down_icon.png" alt="">
+                                </a>
+                                <!--隐藏二级-->
+                                <div class="nav_two">
+                                    <a href="#">企业历程</a>
+                                    <a href="#">荣誉奖项</a>
+                                </div>
+                            </div>
+                            <div class="nav_item">
+                                <a class="clearfix display-block" href="javascript:;">
+                                    <span class="float_lf">华星公益</span>
+                                </a>
+                            </div>
+                            <div class="nav_item">
+                                <a class="clearfix display-block" href="javascript:;">
+                                    <span class="float_lf">管理团队</span>
+                                    <img class="float_rt" src="img/down_icon.png" alt="">
+                                </a>
+                                <!--隐藏二级-->
+                                <div class="nav_two">
+                                    <a href="#">创始人</a>
+                                    <a href="#">分公司负责人</a>
+                                    <a href="#">商学合伙人</a>
+                                </div>
+                            </div>
+                            <div class="nav_item">
+                                <a class="clearfix display-block" href="javascript:;">
+                                    <span class="float_lf">分支结构</span>
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <a href="javascript:;">
@@ -814,11 +850,19 @@
         });
         //导航hover
         $(".header_bottom ul li").hover(function(){
-            $(this).find("a").addClass("act_a");
-            $(this).find("img").attr("src","img/down_red.png");
+            $(this).children('a').addClass("act_a").find("img").attr("src","img/down_red.png");
+            $(this).find('.hide_nav').show();
         },function(){
-            $(this).find("a").removeClass("act_a");
-            $(this).find("img").attr("src","img/down_icon.png");
+            $(this).children('a').removeClass("act_a").find("img").attr("src","img/down_icon.png");
+            $(this).find('.hide_nav').hide();
+        });
+
+        $(".header_bottom ul li .hide_nav .nav_item").hover(function(){
+            $(this).children('a').addClass("act_a").find("img").attr("src","img/down_red.png");
+            $(this).find('.nav_two').show();
+        },function(){
+            $(this).children('a').removeClass("act_a").find("img").attr("src","img/down_icon.png");
+            $(this).find('.nav_two').hide();
         });
 
         //轮播

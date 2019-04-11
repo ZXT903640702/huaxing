@@ -29,7 +29,7 @@
     background-color: #fff;
 }
 .header .header_top .logo a img{
-    width: 316px;
+    width: 270px;
 }
 .header .header_top .search{
     margin-left: 140px;
@@ -131,20 +131,70 @@
 .header_bottom ul li{
     float: left;
     margin-left: 40px;
+    position: relative;
 }
-.header_bottom ul li a{
+.header_bottom ul li>a{
     display: block;
     height: 45px;
     line-height: 45px;
     text-align: center;
     font-size: 16px;
 }
-.header_bottom ul li a p{
+.header_bottom ul li>a p{
     display: inline-block;
 }
-.header_bottom ul li a p img{
-    margin:20px 0 0 5px;
+.header_bottom ul li>a p img{
+    width: 14px;
+    margin:16px 0 0 5px;
 }
+.header_bottom ul li .hide_nav{
+    position: absolute;
+    top:45px;
+    left:-20px;
+    right:0;
+    z-index: 100;
+    margin: 0 auto;
+    background: #fff;
+    width: 120px;
+    padding:10px 0;
+    display: none;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px 1px #e5e5e5;
+}
+.header_bottom ul li .hide_nav .nav_item{
+    text-align: center;
+    position: relative;
+}
+.header_bottom ul li .hide_nav .nav_item a{
+    padding:5px 15px;
+}
+.header_bottom ul li .hide_nav .nav_item a img{
+    width: 14px;
+    transform: rotate(-90deg);
+    margin: 3px 0 0 5px;
+}
+.header_bottom ul li .hide_nav .nav_item .nav_two{
+    position: absolute;
+    top:-10px;
+    left:120px;
+    z-index: 100;
+    width: 120px;
+    padding:10px 0;
+    background: #fff;
+    display: none;
+    box-shadow: 0 0 3px 1px #e5e5e5;
+}
+.nav_two a{
+    display: block;
+    padding:5px 10px;
+}
+.nav_two a:hover{
+    color: #d51716;
+}
+
+
+
+
 
 /*轮播*/
 #banner{
