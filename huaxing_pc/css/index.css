@@ -167,11 +167,15 @@
 }
 .header_bottom ul li .hide_nav .nav_item a{
     padding:5px 15px;
+    text-align: center;
+    position: relative;
 }
 .header_bottom ul li .hide_nav .nav_item a img{
     width: 14px;
     transform: rotate(-90deg);
-    margin: 3px 0 0 5px;
+    position: absolute;
+    top:8px;
+    right:10px;
 }
 .header_bottom ul li .hide_nav .nav_item .nav_two{
     position: absolute;
