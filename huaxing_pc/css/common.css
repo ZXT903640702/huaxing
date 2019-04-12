@@ -378,6 +378,9 @@
     background: #f3f3f3;
     overflow: hidden;
 }
+.mainNav ul > li ol > li{
+    border-bottom: 1px solid #e0e0e0;
+}
 .mainNav ul > li>a.navSelect:hover{
     background-image: url(../img/down_icon_b.png);
 }

@@ -1,3 +1,13 @@
+
+@font-face {
+    font-family: 'YRDZSTRegular';
+    src: url('YRDZSTRegular.eot');
+    src: local('YRDZSTRegular Regular'),
+            local('YRDZSTRegular'),
+            url('./YRDZSTRegular.woff') format('woff'),
+            url('./YRDZSTRegular.ttf') format('truetype'),
+            url('YRDZSTRegular.svg#YRDZSTRegular') format('svg');
+}
 /* 华星介绍 */
 .main .mainCenter{
     position: relative;
@@ -186,4 +196,396 @@
     bottom: 0px;
     left: 50%;
     margin-left: -30px;
+}
+
+/* 荣誉获奖 */
+.awards{
+    width: 100%;
+    margin-bottom: 28px;
+}
+.awards .awardItem{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 22px;
+}
+.awards .awardItem .hoverBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    display: none;
+}
+.awards .awardItem .hoverBox a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 118px;
+    height: 38px;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    margin-left: -59px;
+    margin-top: -16px;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+}
+.awards .awardItem:hover .hoverBox{
+    display: block;
+}
+.awards .awardItem .hoverBox a:hover{
+    color: #000;
+    background: #fff;
+}
+.awards .awardItem .itemImg{
+    width: 300px;
+    height: 224px;
+    padding: 28px 40px;
+    background: #f3f3f3;
+}
+.awards .awardItem .itemImg img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.awards .awardItem .itemText{
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* 奖项弹窗 */
+.awardPopUp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.awardPopUp .popBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+}
+.awardPopUp .popCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    margin-left: -400px;
+    margin-top: -500px;
+    background: #fff;
+    padding-top: 85px;
+    padding-bottom: 60px;
+}
+.awardPopUp .popCont .closePop{
+    position: absolute;
+    top: 0;
+    right: -60px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/close.png) no-repeat center center /30px rgba(0,0,0,.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.awardPopUp .popCont .popImg img{
+    display: block;
+    min-height: 320px;
+    margin: 0 auto;
+}
+.awardPopUp .popCont .popTitle{
+    text-align: center;
+    padding: 20px 0;
+}
+.awardPopUp .popCont .popText{
+    color: #666;
+    padding: 0 60px;
+    text-indent: 2em;
+    line-height: 26px;
+}
+
+/* 分页条 */
+.pageBar{
+    width: 100%;
+    text-align: center;
+}
+.pageBar ul{
+    display: inline-block;
+}
+.pageBar ul li{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    border: 1px solid #999;
+    line-height: 36px;
+    text-align: center;
+}
+.pageBar ul li a{
+    display: block;
+    color: #999;
+}
+.pageBar ul li:hover,.pageBar ul li.action{
+    border-color: #D51816;
+}
+.pageBar ul li:hover a,.pageBar ul li.action a{
+    color: #D51816;
+}
+
+/* 华星公益 */
+.main .page3{
+}
+.main .page1 .inner .pageLeft{
+    float: left;
+    width: 47%;
+    font-family: "YRDZSTRegular";
+    line-height: 26px;
+}
+.main .page1 .inner .pageLeft .title{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.main .page1 .inner .pageLeft .text{
+    text-indent: 2em;
+    font-size: 16px;
+}
+.main .page1 .inner .pageLeft .preface{
+    text-indent: 2em;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.main .page1 .inner .pageRight{
+    float: left;
+    width: 53%;
+}
+.main .page1 .inner .pageRight img{
+    display: block;
+    margin: 0 auto;
+}
+
+.main .page2{
+    background: #f8f8f8;
+}
+.main .page2 .inner .pageRight{
+    float: left;
+    width: 40%;
+    line-height: 30px;
+    padding-top: 100px;
+}
+.main .page2 .inner .pageRight .title{
+    padding-top: 30px;
+    font-size: 30px;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+.main .page2 .inner .pageRight .text{
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: "MicroSoft Yahei";
+    padding-left: 50px;
+}
+.main .page2 .inner .pageRight .communityPoint{
+    padding-left: 50px;
+}
+.main .page2 .inner .pageRight .text .colorRed{
+    color: #993333;
+    font-weight: 700;
+}
+.main .page2 .inner .pageLeft{
+    float: left;
+    width: 60%;
+}
+.main .page2 .inner .pageLeft .map{
+    position: relative;
+}
+.main .page2 .inner .pageLeft .map span{
+    position: absolute;
+    color: red;
+    background: url(../img/mapPoint.png) no-repeat left center /20px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+.main .page2 .inner .pageLeft .map .sichuan{
+    top: 330px;
+    left: 310px;
+}
+.main .page2 .inner .pageLeft .map .guizhou{
+    top: 390px;
+    left: 380px;
+}
+.main .page2 .inner .pageLeft .map .xinjiang{
+    top: 125px;
+    left: 125px;
+}
+.main .page2 .inner .pageLeft .map .neimeng{
+    top: 125px;
+    left: 465px;
+}
+.main .page2 .inner .pageLeft .map .gansu{
+    top: 205px;
+    left: 335px;
+}
+.main .page2 .inner .pageLeft .map .mapPopUp{
+    position: absolute;
+    display: none;
+}
+
+.main .page3{
+    padding-top: 50px;
+}
+.main .page3 .inner .pageLeft{
+    float: left;
+    width: 40%;
+    line-height: 30px;
+}
+.main .page3 .inner .pageLeft .title{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.main .page3 .inner .pageLeft .text{
+    text-indent: 2em;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+.main .page3 .inner .pageLeft .link a{
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: #D51717;
+    border-radius: 200px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+}
+.main .page3 .inner .pageRight{
+    float: left;
+    width: 60%;
+}
+.main .page3 .inner .pageRight img{
+    float: right;
+}
+.main .page3 .inner .pageRight .img5{
+    margin-left: 7px;
+}
+.main .page3 .inner .pageRight .img3{
+    margin: 7px 0;
+}
+
+/* 创始人 */
+.banner .bannerInner .text .box h4.line{
+    color: #1A85CB;
+}
+.banner .bannerInner .text .box p.bigFont{
+    font-size: 20px;
+}
+.originator .oLeft{
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+}
+.originator .oLeft .title{
+    font-size: 36px;
+    font-weight: 700;
+}
+.originator .oLeft .Eg{
+    font-size: 17px;
+    color: #1A85CB;
+    padding: 10px 0;
+}
+.originator .oLeft .text{
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+.originator .oLeft .content{
+    text-indent: 2em;
+    line-height: 30px;
+}
+.originator .oLeft .img{
+    margin-top: 40px;
+    text-align: right;
+}
+.originator .oLeft .img img{
+    display: inline;
+}
+.originator .oRight{
+    float: left;
+    width: 50%;
+}
+
+/* 分院负责人 */
+.principal{
+    width: 100%;
+    margin-bottom: 28px;
+}
+.principal .principalItem{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 22px;
+}
+.principal .principalItem .hoverBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    display: none;
+}
+.principal .principalItem .hoverBox a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 118px;
+    height: 38px;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    margin-left: -59px;
+    margin-top: -16px;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+}
+.principal .principalItem:hover .hoverBox{
+    display: block;
+}
+.principal .principalItem .hoverBox a:hover{
+    color: #000;
+    background: #fff;
+}
+.principal .principalItem .itemImg{
+    width: 300px;
+    padding: 26px 40px 0 40px;
+    background: #f3f3f3;
+}
+.principal .principalItem .itemImg img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.principal .principalItem .itemText{
+    padding: 20px 0;
+    text-align: center;
+}
+.principal .principalItem .itemText .name{
+    font-size: 18px;
+}
+
+/* 分公司负责人详情 */
+.breadcrumb.principalDetail{
+    margin-bottom: 0;
+    padding-bottom: 90px;
+}
+.principalDetail{
+    background: #f3f3f3;
 }
