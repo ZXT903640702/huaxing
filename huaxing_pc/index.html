@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-1.9.1.min.js"></script>
 </head>
@@ -887,6 +888,10 @@
         //点击输入框隐藏提示信息
         $(".search form .search_inp").focus(function(){
             $(".search_box p").hide();
+        });
+        $('.search_box>p').click(function(){
+            $(this).hide();
+            $(".search form .search_inp").focus();
         });
         //输入框失去焦点
         $(".search form .search_inp").blur(function(){
