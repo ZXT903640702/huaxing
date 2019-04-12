@@ -1,0 +1,19 @@
+$(".navSelect").siblings("ol").each(function(){
+    $(this).attr("data-h",$(this).height());
+    $(this).height(0);
+});
+$(".navSelect").on("mouseenter",function(){
+    $(this).siblings("ol").stop().animate({height:$(this).siblings("ol").attr("data-h")},300);
+});
+$(".navSelect").parent("li").on("mouseleave",function(){
+    $(this).find("ol").stop().animate({height:0},300);
+});
+
+$("#videoShow").on("click",function(){
+    $(".videoBox").show();
+    $("#video")[0].play();
+});
+$(".boxBg").on("click",function(){
+    $("#video")[0].pause();
+    $(".videoBox").hide();
+});

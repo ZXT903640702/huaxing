@@ -1,84 +1,4 @@
-.max_wh{
-    width: 1200px;
-    margin: 0 auto;
-}
-.clearBoth{
-    clear: both;
-}
-
-.banner{
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-}
-.banner img{
-}
-
-/* 内容导航 */
-.mainNav{
-    width: 100%;
-    background: #F3F3F3;
-    line-height: 48px;
-    font-size: 16px;
-    border-bottom: 1px solid #eee;
-}
-.mainNav ul{
-    width: 860px;
-    height: 48px;
-    margin: 0 auto;
-}
-.mainNav ul > li{
-    position: relative;
-    float: left;
-    width: 25%;
-    height: 100%;
-    text-align: center;
-}
-.mainNav ul > li a{
-    display: block;
-}
-.mainNav ul > li > a{
-    line-height: 46px;
-    border-bottom: 3px solid #f3f3f3;
-}
-.mainNav ul > li > a.navSelect{
-    background: url(../img/down_icon.png) no-repeat 72% center;
-}
-.mainNav ul > li ol{
-    position: absolute;
-    width: 100%;
-    max-height: 0;
-    z-index: 999;
-    background: #f3f3f3;
-    transition: max-height .5s ease 0s;
-    overflow: hidden;
-}
-.mainNav ul > li a:hover,.mainNav ul > li a.action{
-    color: #3399cc;
-    border-bottom-color: #3399cc;
-}
-.mainNav ul > li > a:hover ~ ol{
-    max-height: 999px;
-}
-.mainNav ul > li ol.action,.mainNav ul > li ol:hover{
-    max-height: 999px;
-}
-.mainNav a.action{
-    color: #3399cc;
-}
-
-/* 主要内容区域 */
-.main{
-    width: 100%;
-}
-.main .breadcrumb{
-    width: 1200px;
-    margin: 0 auto;
-    line-height: 42px;
-    color: #666;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 90px;
-}
+/* 华星介绍 */
 .main .mainCenter{
     position: relative;
     width: 1200px;
@@ -106,6 +26,7 @@
     float: left;
     width: 45%;
     padding-left: 5%;
+    margin-top: -100px;
 }
 .main .mainCenter .mainContent .contentRight .mainTitle{
     font-size: 30px;
@@ -128,73 +49,141 @@
     line-height: 30px;
     margin-bottom: 10px;
 }
-
-/*底部*/
-.footer{
+.videoBox{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #2a2a2a;
+    height: 100%;
+    z-index: 9;
+    display: none;
 }
-.footer .footer_top .f_logo{
-    padding: 48px 0;
+.videoBox .boxBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
 }
-.footer .footer_top .f_box{
-    padding-bottom: 70px;
+.videoBox .videoCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1280px;
+    height: 720px;
+    background: #fff;
+    margin-top: -360px;
+    margin-left: -640px;
 }
-.footer .footer_top .f_box ul{
-    width: 870px;
-    border-right: 1px solid #3e3e3e;
+.videoBox .videoCont video{
+    width: 100%;
+    height: 100%;
 }
-.footer .footer_top .f_box ul li{
-    float: left;
-    text-align: left;
-    margin-right: 78px;
-}
-.footer .footer_top .f_box ul li p{
-    color:#fff;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.footer .footer_top .f_box ul li a{
-    color:#999;
-    display: block;
-    font-size: 14px;
-    line-height: 30px;
-}
-.footer .footer_top .f_box ul li a:hover{
-    color:#fff;
-}
-.contact_us{
-    padding-left: 80px;
-}
-.contact_us .tel p:first-child{
-    font-size: 18px;
-    color:#fff;
-}
-.contact_us .tel p:first-child span{
-    font-size: 14px;
-}
-.contact_us .tel p:first-child+p{
-    color:#fff;
-    font-size: 24px;
-}
-.contact_us .ewm_box{
-    margin-top: 25px;
-}
-.contact_us .ewm_box p{
-    text-align: left;
-}
-.contact_us .ewm_box p:first-child{
-    margin-right: 30px;
-}
-.contact_us .ewm_box p span{
-    display: inline-block;
-    color:#999;
-    font-size: 14px;
-    line-height: 30px;
-}
-.footer_bot{
-    color:#999;
-    line-height: 76px;
+
+
+/* 时间轴 */
+.main .mainDetail .timerTitle{
     text-align: center;
-    border-top: 1px solid #3e3e3e;
+    line-height: 80px;
+}
+.main .mainDetail .timerShaft{
+    background: url(../img/timerTop.png) no-repeat center top;
+}
+.main .mainDetail .timerShaft .timerItem{
+    overflow: hidden;
+}
+.main .mainDetail .timerShaft .timerItem .itemImg{
+    float: left;
+    width: 50%;
+    padding: 50px 0 20px 0;
+}
+.main .mainDetail .timerShaft .timerItem .itemText{
+    float: left;
+    width: 49%;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.main .mainDetail .timerShaft .timerItem .itemImg img{
+    float: right;
+    margin-right: 50px;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemTitle{
+    font-size: 18px;
+    border-bottom: 1px solid #1D86C7;
+    text-align: right;
+    padding: 50px 0 20px 0;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemTitle .year{
+    font-weight: 700;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemTitle .point{
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #1D86C7;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemContent{
+    position: relative;
+    font-size: 14px;
+    padding: 20px 0 0 50px;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemContent .timerPoint{
+    position: absolute;
+    top: -6.5px;
+    left: -6.5px;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemContent p{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    background: url(../img/point.png) no-repeat left center;
+}
+.main .mainDetail .timerShaft .timerItem.left .itemText{
+    border-left-color: #1D86C7;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemImg{
+    float: right;
+    width: 49.9%;
+    border-left-color: #1D86C7;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemImg img{
+    float: left;
+    margin-left: 50px;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText{
+    float: right;
+    border-right-color: #1D86C7;
+    padding-left: 1px;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText .itemTitle{
+    text-align: left;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText .itemContent {
+    padding-left: 0px;
+    padding-right: 50px;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText .itemContent .timerPoint{
+    position: absolute;
+    top: -6.5px;
+    left: auto;
+    right: -6.5px;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText .itemContent p{
+    margin-bottom: 20px;
+}
+.main .mainDetail .timerShaft .timerItem.last{
+    position: relative;
+    padding-bottom: 60px;
+}
+.main .mainDetail .timerShaft .timerItem.last .itemText .itemContent{
+    padding-bottom: 100px;
+}
+.main .mainDetail .timerShaft .timerItem.last .timerLogo{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -30px;
 }
