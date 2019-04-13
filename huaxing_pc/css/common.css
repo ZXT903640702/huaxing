@@ -302,3 +302,146 @@
     text-align: center;
     border-top: 1px solid #3e3e3e;
 }
+/***********************************banner***********************************/
+.banner{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.banner img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+}
+.banner .bannerInner{
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.banner .bannerInner .text{
+    display: table;
+    width: 50%;
+    height: 100%;
+    font-size: 30px;
+}
+.banner .bannerInner .text .box{
+    display: table-cell;
+    vertical-align: middle;
+}
+.banner .bannerInner .text .box h4{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+.banner .bannerInner .text .box p{
+    font-size: 16px;
+    line-height: 24px;
+}
+/***********************************内容导航***********************************/
+.mainNav{
+    width: 100%;
+    background: #F3F3F3;
+    line-height: 48px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+.mainNav ul{
+    width: 860px;
+    height: 48px;
+    margin: 0 auto;
+}
+.mainNav ul > li{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+.mainNav ul > li a{
+    display: block;
+}
+.mainNav ul > li > a{
+    line-height: 46px;
+    border-bottom: 3px solid #f3f3f3;
+}
+.mainNav ul > li > a.navSelect{
+    background: url(../img/down_icon.png) no-repeat 72% center;
+    background-size: 15px 15px;
+}
+.mainNav ul > li ol{
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background: #f3f3f3;
+    overflow: hidden;
+}
+.mainNav ul > li ol > li{
+    border-bottom: 1px solid #e0e0e0;
+}
+.mainNav ul > li>a.navSelect:hover{
+    background-image: url(../img/down_icon_b.png);
+}
+.mainNav ul > li>a.navSelect.action{
+    background-image: url(../img/down_icon_b.png);
+}
+.mainNav ul > li a:hover,.mainNav ul > li a.action{
+    color: #3399cc;
+    border-bottom-color: #3399cc;
+}
+.mainNav a.action{
+    color: #3399cc;
+}
+/***********************************面包屑***********************************/
+.breadcrumb{
+    width: 100%;
+    margin: 0 auto;
+    line-height: 42px;
+    color: #666;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 90px;
+}
+.breadcrumb .inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.breadcrumb .inner a:hover{
+    color: #1D86C7;
+}
+/***********************************公共title***********************************/
+.main .mainTitle{
+    text-align: center;
+    font-size: 30px;
+}
+.main .mainTitle h3{
+    font-weight: 400;
+}
+.main .mainTitle p{
+    position: relative;
+    font-size: 16px;
+    line-height: 60px;
+}
+.main .mainTitle p span{
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    top: 50%;
+    background: #ccc;
+}
+.main .mainTitle p span.lineL{
+    margin-left: -100px;
+}
+.main .mainTitle p span.lineR{
+    margin-left: 20px;
+}
+/***********************************主要内容区域***********************************/
+.main{
+    width: 100%;
+}
+.main .inner{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}

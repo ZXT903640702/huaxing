@@ -1,84 +1,14 @@
-.max_wh{
-    width: 1200px;
-    margin: 0 auto;
-}
-.clearBoth{
-    clear: both;
-}
 
-.banner{
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
+@font-face {
+    font-family: 'YRDZSTRegular';
+    src: url('YRDZSTRegular.eot');
+    src: local('YRDZSTRegular Regular'),
+            local('YRDZSTRegular'),
+            url('./YRDZSTRegular.woff') format('woff'),
+            url('./YRDZSTRegular.ttf') format('truetype'),
+            url('YRDZSTRegular.svg#YRDZSTRegular') format('svg');
 }
-.banner img{
-}
-
-/* 内容导航 */
-.mainNav{
-    width: 100%;
-    background: #F3F3F3;
-    line-height: 48px;
-    font-size: 16px;
-    border-bottom: 1px solid #eee;
-}
-.mainNav ul{
-    width: 860px;
-    height: 48px;
-    margin: 0 auto;
-}
-.mainNav ul > li{
-    position: relative;
-    float: left;
-    width: 25%;
-    height: 100%;
-    text-align: center;
-}
-.mainNav ul > li a{
-    display: block;
-}
-.mainNav ul > li > a{
-    line-height: 46px;
-    border-bottom: 3px solid #f3f3f3;
-}
-.mainNav ul > li > a.navSelect{
-    background: url(../img/down_icon.png) no-repeat 72% center;
-}
-.mainNav ul > li ol{
-    position: absolute;
-    width: 100%;
-    max-height: 0;
-    z-index: 999;
-    background: #f3f3f3;
-    transition: max-height .5s ease 0s;
-    overflow: hidden;
-}
-.mainNav ul > li a:hover,.mainNav ul > li a.action{
-    color: #3399cc;
-    border-bottom-color: #3399cc;
-}
-.mainNav ul > li > a:hover ~ ol{
-    max-height: 999px;
-}
-.mainNav ul > li ol.action,.mainNav ul > li ol:hover{
-    max-height: 999px;
-}
-.mainNav a.action{
-    color: #3399cc;
-}
-
-/* 主要内容区域 */
-.main{
-    width: 100%;
-}
-.main .breadcrumb{
-    width: 1200px;
-    margin: 0 auto;
-    line-height: 42px;
-    color: #666;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 90px;
-}
+/* 华星介绍 */
 .main .mainCenter{
     position: relative;
     width: 1200px;
@@ -106,6 +36,7 @@
     float: left;
     width: 45%;
     padding-left: 5%;
+    margin-top: -100px;
 }
 .main .mainCenter .mainContent .contentRight .mainTitle{
     font-size: 30px;
@@ -128,73 +59,533 @@
     line-height: 30px;
     margin-bottom: 10px;
 }
-
-/*底部*/
-.footer{
+.videoBox{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #2a2a2a;
+    height: 100%;
+    z-index: 9;
+    display: none;
 }
-.footer .footer_top .f_logo{
-    padding: 48px 0;
+.videoBox .boxBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
 }
-.footer .footer_top .f_box{
-    padding-bottom: 70px;
+.videoBox .videoCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1280px;
+    height: 720px;
+    background: #fff;
+    margin-top: -360px;
+    margin-left: -640px;
 }
-.footer .footer_top .f_box ul{
-    width: 870px;
-    border-right: 1px solid #3e3e3e;
+.videoBox .videoCont video{
+    width: 100%;
+    height: 100%;
 }
-.footer .footer_top .f_box ul li{
-    float: left;
-    text-align: left;
-    margin-right: 78px;
-}
-.footer .footer_top .f_box ul li p{
-    color:#fff;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.footer .footer_top .f_box ul li a{
-    color:#999;
-    display: block;
-    font-size: 14px;
-    line-height: 30px;
-}
-.footer .footer_top .f_box ul li a:hover{
-    color:#fff;
-}
-.contact_us{
-    padding-left: 80px;
-}
-.contact_us .tel p:first-child{
-    font-size: 18px;
-    color:#fff;
-}
-.contact_us .tel p:first-child span{
-    font-size: 14px;
-}
-.contact_us .tel p:first-child+p{
-    color:#fff;
-    font-size: 24px;
-}
-.contact_us .ewm_box{
-    margin-top: 25px;
-}
-.contact_us .ewm_box p{
-    text-align: left;
-}
-.contact_us .ewm_box p:first-child{
-    margin-right: 30px;
-}
-.contact_us .ewm_box p span{
-    display: inline-block;
-    color:#999;
-    font-size: 14px;
-    line-height: 30px;
-}
-.footer_bot{
-    color:#999;
-    line-height: 76px;
+
+
+/* 时间轴 */
+.main .mainDetail .timerTitle{
     text-align: center;
-    border-top: 1px solid #3e3e3e;
+    line-height: 80px;
+}
+.main .mainDetail .timerShaft{
+    background: url(../img/timerTop.png) no-repeat center top;
+}
+.main .mainDetail .timerShaft .timerItem{
+    overflow: hidden;
+}
+.main .mainDetail .timerShaft .timerItem .itemImg{
+    float: left;
+    width: 50%;
+    padding: 50px 0 20px 0;
+}
+.main .mainDetail .timerShaft .timerItem .itemText{
+    float: left;
+    width: 49%;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.main .mainDetail .timerShaft .timerItem .itemImg img{
+    float: right;
+    margin-right: 50px;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemTitle{
+    font-size: 18px;
+    border-bottom: 1px solid #1D86C7;
+    text-align: right;
+    padding: 50px 0 20px 0;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemTitle .year{
+    font-weight: 700;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemTitle .point{
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #1D86C7;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemContent{
+    position: relative;
+    font-size: 14px;
+    padding: 20px 0 0 50px;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemContent .timerPoint{
+    position: absolute;
+    top: -6.5px;
+    left: -6.5px;
+}
+.main .mainDetail .timerShaft .timerItem .itemText .itemContent p{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    background: url(../img/point.png) no-repeat left center;
+}
+.main .mainDetail .timerShaft .timerItem.left .itemText{
+    border-left-color: #1D86C7;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemImg{
+    float: right;
+    width: 49.9%;
+    border-left-color: #1D86C7;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemImg img{
+    float: left;
+    margin-left: 50px;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText{
+    float: right;
+    border-right-color: #1D86C7;
+    padding-left: 1px;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText .itemTitle{
+    text-align: left;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText .itemContent {
+    padding-left: 0px;
+    padding-right: 50px;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText .itemContent .timerPoint{
+    position: absolute;
+    top: -6.5px;
+    left: auto;
+    right: -6.5px;
+}
+.main .mainDetail .timerShaft .timerItem.right .itemText .itemContent p{
+    margin-bottom: 20px;
+}
+.main .mainDetail .timerShaft .timerItem.last{
+    position: relative;
+    padding-bottom: 60px;
+}
+.main .mainDetail .timerShaft .timerItem.last .itemText .itemContent{
+    padding-bottom: 100px;
+}
+.main .mainDetail .timerShaft .timerItem.last .timerLogo{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -30px;
+}
+
+/* 荣誉获奖 */
+.awards{
+    width: 100%;
+    margin-bottom: 28px;
+}
+.awards .awardItem{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 22px;
+}
+.awards .awardItem .hoverBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    display: none;
+}
+.awards .awardItem .hoverBox a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 118px;
+    height: 38px;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    margin-left: -59px;
+    margin-top: -16px;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+}
+.awards .awardItem:hover .hoverBox{
+    display: block;
+}
+.awards .awardItem .hoverBox a:hover{
+    color: #000;
+    background: #fff;
+}
+.awards .awardItem .itemImg{
+    width: 300px;
+    height: 224px;
+    padding: 28px 40px;
+    background: #f3f3f3;
+}
+.awards .awardItem .itemImg img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.awards .awardItem .itemText{
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* 奖项弹窗 */
+.awardPopUp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.awardPopUp .popBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+}
+.awardPopUp .popCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    margin-left: -400px;
+    margin-top: -500px;
+    background: #fff;
+    padding-top: 85px;
+    padding-bottom: 60px;
+}
+.awardPopUp .popCont .closePop{
+    position: absolute;
+    top: 0;
+    right: -60px;
+    width: 50px;
+    height: 50px;
+    background: url(../img/close.png) no-repeat center center /30px rgba(0,0,0,.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.awardPopUp .popCont .popImg img{
+    display: block;
+    min-height: 320px;
+    margin: 0 auto;
+}
+.awardPopUp .popCont .popTitle{
+    text-align: center;
+    padding: 20px 0;
+}
+.awardPopUp .popCont .popText{
+    color: #666;
+    padding: 0 60px;
+    text-indent: 2em;
+    line-height: 26px;
+}
+
+/* 分页条 */
+.pageBar{
+    width: 100%;
+    text-align: center;
+}
+.pageBar ul{
+    display: inline-block;
+}
+.pageBar ul li{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    border: 1px solid #999;
+    line-height: 36px;
+    text-align: center;
+}
+.pageBar ul li a{
+    display: block;
+    color: #999;
+}
+.pageBar ul li:hover,.pageBar ul li.action{
+    border-color: #D51816;
+}
+.pageBar ul li:hover a,.pageBar ul li.action a{
+    color: #D51816;
+}
+
+/* 华星公益 */
+.main .page3{
+}
+.main .page1 .inner .pageLeft{
+    float: left;
+    width: 47%;
+    font-family: "YRDZSTRegular";
+    line-height: 26px;
+}
+.main .page1 .inner .pageLeft .title{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.main .page1 .inner .pageLeft .text{
+    text-indent: 2em;
+    font-size: 16px;
+}
+.main .page1 .inner .pageLeft .preface{
+    text-indent: 2em;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.main .page1 .inner .pageRight{
+    float: left;
+    width: 53%;
+}
+.main .page1 .inner .pageRight img{
+    display: block;
+    margin: 0 auto;
+}
+
+.main .page2{
+    background: #f8f8f8;
+}
+.main .page2 .inner .pageRight{
+    float: left;
+    width: 40%;
+    line-height: 30px;
+    padding-top: 100px;
+}
+.main .page2 .inner .pageRight .title{
+    padding-top: 30px;
+    font-size: 30px;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+.main .page2 .inner .pageRight .text{
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: "MicroSoft Yahei";
+    padding-left: 50px;
+}
+.main .page2 .inner .pageRight .communityPoint{
+    padding-left: 50px;
+}
+.main .page2 .inner .pageRight .text .colorRed{
+    color: #993333;
+    font-weight: 700;
+}
+.main .page2 .inner .pageLeft{
+    float: left;
+    width: 60%;
+}
+.main .page2 .inner .pageLeft .map{
+    position: relative;
+}
+.main .page2 .inner .pageLeft .map span{
+    position: absolute;
+    color: red;
+    background: url(../img/mapPoint.png) no-repeat left center /20px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+.main .page2 .inner .pageLeft .map .sichuan{
+    top: 330px;
+    left: 310px;
+}
+.main .page2 .inner .pageLeft .map .guizhou{
+    top: 390px;
+    left: 380px;
+}
+.main .page2 .inner .pageLeft .map .xinjiang{
+    top: 125px;
+    left: 125px;
+}
+.main .page2 .inner .pageLeft .map .neimeng{
+    top: 125px;
+    left: 465px;
+}
+.main .page2 .inner .pageLeft .map .gansu{
+    top: 205px;
+    left: 335px;
+}
+.main .page2 .inner .pageLeft .map .mapPopUp{
+    position: absolute;
+    display: none;
+}
+
+.main .page3{
+    padding-top: 50px;
+}
+.main .page3 .inner .pageLeft{
+    float: left;
+    width: 40%;
+    line-height: 30px;
+}
+.main .page3 .inner .pageLeft .title{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.main .page3 .inner .pageLeft .text{
+    text-indent: 2em;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+.main .page3 .inner .pageLeft .link a{
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: #D51717;
+    border-radius: 200px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+}
+.main .page3 .inner .pageRight{
+    float: left;
+    width: 60%;
+}
+.main .page3 .inner .pageRight img{
+    float: right;
+}
+.main .page3 .inner .pageRight .img5{
+    margin-left: 7px;
+}
+.main .page3 .inner .pageRight .img3{
+    margin: 7px 0;
+}
+
+/* 创始人 */
+.banner .bannerInner .text .box h4.line{
+    color: #1A85CB;
+}
+.banner .bannerInner .text .box p.bigFont{
+    font-size: 20px;
+}
+.originator .oLeft{
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+}
+.originator .oLeft .title{
+    font-size: 36px;
+    font-weight: 700;
+}
+.originator .oLeft .Eg{
+    font-size: 17px;
+    color: #1A85CB;
+    padding: 10px 0;
+}
+.originator .oLeft .text{
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+.originator .oLeft .content{
+    text-indent: 2em;
+    line-height: 30px;
+}
+.originator .oLeft .img{
+    margin-top: 40px;
+    text-align: right;
+}
+.originator .oLeft .img img{
+    display: inline;
+}
+.originator .oRight{
+    float: left;
+    width: 50%;
+}
+
+/* 分院负责人 */
+.principal{
+    width: 100%;
+    margin-bottom: 28px;
+}
+.principal .principalItem{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 22px;
+}
+.principal .principalItem .hoverBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    display: none;
+}
+.principal .principalItem .hoverBox a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 118px;
+    height: 38px;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    margin-left: -59px;
+    margin-top: -16px;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+}
+.principal .principalItem:hover .hoverBox{
+    display: block;
+}
+.principal .principalItem .hoverBox a:hover{
+    color: #000;
+    background: #fff;
+}
+.principal .principalItem .itemImg{
+    width: 300px;
+    padding: 26px 40px 0 40px;
+    background: #f3f3f3;
+}
+.principal .principalItem .itemImg img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.principal .principalItem .itemText{
+    padding: 20px 0;
+    text-align: center;
+}
+.principal .principalItem .itemText .name{
+    font-size: 18px;
+}
+
+/* 分公司负责人详情 */
+.breadcrumb.principalDetail{
+    margin-bottom: 0;
+    padding-bottom: 90px;
+}
+.principalDetail{
+    background: #f3f3f3;
 }

@@ -130,3 +130,6 @@ main, nav, header, footer, section, article, aside, dialog, figure, menu ,img{
 	width: 60%;
 	margin: 40px auto;
 }
+.clearBoth{
+    clear: both;
+}
