@@ -131,5 +131,6 @@ main, nav, header, footer, section, article, aside, dialog, figure, menu ,img{
 	margin: 40px auto;
 }
 .clearBoth{
+	position: relative;
     clear: both;
 }

@@ -2,11 +2,13 @@
 @font-face {
     font-family: 'YRDZSTRegular';
     src: url('YRDZSTRegular.eot');
-    src: local('YRDZSTRegular Regular'),
-            local('YRDZSTRegular'),
-            url('./YRDZSTRegular.woff') format('woff'),
-            url('./YRDZSTRegular.ttf') format('truetype'),
-            url('YRDZSTRegular.svg#YRDZSTRegular') format('svg');
+    src: url('YRDZSTRegular.eot?#iefix') format('embedded-opentype'),  
+        url('YRDZSTRegular.woff') format('woff'),
+        url('YRDZSTRegular.ttf') format('truetype'),
+        url('YRDZSTRegular.svg#YRDZSTRegular') format('svg');
+    }
+body{
+    font-family: "MicroSoft Yahei";
 }
 /* 华星介绍 */
 .main .mainCenter{
@@ -75,6 +77,8 @@
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.5);
+    background: #000 \9;
+    filter:alpha(opacity=50);
 }
 .videoBox .videoCont{
     position: absolute;
@@ -86,7 +90,7 @@
     margin-top: -360px;
     margin-left: -640px;
 }
-.videoBox .videoCont video{
+.videoBox .videoCont #video{
     width: 100%;
     height: 100%;
 }
@@ -216,6 +220,8 @@
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.4);
+    background: #000 \9;
+    filter:alpha(opacity=50);
     display: none;
 }
 .awards .awardItem .hoverBox a{
@@ -271,6 +277,8 @@
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.4);
+    background: #000 \9;
+    filter:alpha(opacity=50);
 }
 .awardPopUp .popCont{
     position: absolute;
@@ -289,7 +297,9 @@
     right: -60px;
     width: 50px;
     height: 50px;
-    background: url(../img/close.png) no-repeat center center /30px rgba(0,0,0,.5);
+    background: url(../img/close.png) no-repeat center center rgba(0,0,0,.5);
+    background: url(../img/close.png) no-repeat center center #000 \9;
+    filter:alpha(opacity=50);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -322,7 +332,7 @@
     width: 36px;
     height: 36px;
     vertical-align: middle;
-    border: 1px solid #999;
+    border: 1px solid #e5e5e5;
     line-height: 36px;
     text-align: center;
 }
@@ -408,29 +418,30 @@
 .main .page2 .inner .pageLeft .map span{
     position: absolute;
     color: red;
-    background: url(../img/mapPoint.png) no-repeat left center /20px;
+    background: url(../img/mapPoint.png) no-repeat left center;
+    background-size: 20px;
     padding-left: 25px;
     cursor: pointer;
 }
 .main .page2 .inner .pageLeft .map .sichuan{
-    top: 330px;
-    left: 310px;
+    top: 380px;
+    left: 320px;
 }
 .main .page2 .inner .pageLeft .map .guizhou{
-    top: 390px;
-    left: 380px;
+    top: 440px;
+    left: 390px;
 }
 .main .page2 .inner .pageLeft .map .xinjiang{
-    top: 125px;
-    left: 125px;
+    top: 175px;
+    left: 135px;
 }
 .main .page2 .inner .pageLeft .map .neimeng{
-    top: 125px;
-    left: 465px;
+    top: 165px;
+    left: 475px;
 }
 .main .page2 .inner .pageLeft .map .gansu{
-    top: 205px;
-    left: 335px;
+    top: 255px;
+    left: 345px;
 }
 .main .page2 .inner .pageLeft .map .mapPopUp{
     position: absolute;
@@ -442,7 +453,7 @@
 }
 .main .page3 .inner .pageLeft{
     float: left;
-    width: 40%;
+    width: 38%;
     line-height: 30px;
 }
 .main .page3 .inner .pageLeft .title{
@@ -469,7 +480,7 @@
 }
 .main .page3 .inner .pageRight{
     float: left;
-    width: 60%;
+    width: 62%;
 }
 .main .page3 .inner .pageRight img{
     float: right;
@@ -494,16 +505,18 @@
     margin-right: 5%;
 }
 .originator .oLeft .title{
-    font-size: 36px;
+    font-size: 58px;
     font-weight: 700;
+    font-family: "SimSun";
 }
 .originator .oLeft .Eg{
-    font-size: 17px;
+    font-size: 25px;
     color: #1A85CB;
     padding: 10px 0;
+    margin-bottom: 10px;
 }
 .originator .oLeft .text{
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 100px;
 }
 .originator .oLeft .content{
@@ -530,38 +543,11 @@
 .principal .principalItem{
     position: relative;
     display: inline-block;
-    border: 1px solid #f3f3f3;
+    border: 1px solid #fff;
     margin-bottom: 22px;
 }
-.principal .principalItem .hoverBox{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.4);
-    display: none;
-}
-.principal .principalItem .hoverBox a{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 118px;
-    height: 38px;
-    border: 1px solid #fff;
-    border-radius: 500px;
-    margin-left: -59px;
-    margin-top: -16px;
-    color: #fff;
-    text-align: center;
-    line-height: 38px;
-}
-.principal .principalItem:hover .hoverBox{
-    display: block;
-}
-.principal .principalItem .hoverBox a:hover{
-    color: #000;
-    background: #fff;
+.principal .principalItem:hover{
+    border-color: #f3f3f3;
 }
 .principal .principalItem .itemImg{
     width: 300px;
@@ -587,5 +573,331 @@
     padding-bottom: 90px;
 }
 .principalDetail{
+    background: #f0f0f0;
+}
+.detail{
+    background: #fff;
+    padding: 20px 30px 40px 20px;
+}
+.detail .detailLeft{
+    float: left;
+    width: 30%;
+    background: #f0f0f0;
+    margin-right: 5%;
+}
+.detail .detailLeft img{
+    display: block;
+    margin: 0 auto
+}
+.detail .detailRight{
+    float: left;
+    width: 65%;
+    padding-top: 25px;
+}
+.detail .detailRight .rightHeader .name{
+    font-size: 18px;
+}
+.detail .detailRight .rightHeader .line{
+    width: 40px;
+    height: 2px;
+    background: #1A85CB;
+    margin: 10px 0;
+}
+.detail .detailRight .rightHeader .tag{
+    color: #333;
+    font-size: 15px;
+}
+.detail .detailRight .rightTitle{
+    display: inline-block;
+    padding: 5px 10px;
+    background: #1a85cb;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.detail .detailRight .rightText{
+    color: #333;
+    line-height: 28px;
+    font-size: 15px;
+}
+
+/* 分支机构 */
+.breadcrumb.embranch{
+    margin-bottom: 20px;
+}
+.embranchment{
+    margin-bottom: 60px;
+}
+.embranchment .filter{
+    background: #f8f8f8;
+    padding-left: 26px;
+    line-height: 38px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.embranchment .filter a{
+    color: #666;
+    margin: 10px;
+}
+.embranchment .filter a:hover,.embranchment .filter a.action{
+    color: #1a85cb;
+}
+.embranchment .embranchmentList .item{
+    padding: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.embranchment .embranchmentList .item .itemLeft{
+    float: left;
+    width: 40%;
+}
+.embranchment .embranchmentList .item .itemLeft a{
+    display: inline-block;
+}
+.embranchment .embranchmentList .item .itemLeft img{
+    display: block;
+    max-width: 400px;
+    max-height: 270px;
+}
+.embranchment .embranchmentList .item .itemRight{
+    float: left;
+    width: 60%;
+}
+.embranchment .embranchmentList .item .itemRight .title{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.embranchment .embranchmentList .item .itemRight .text{
+    color: #666;
+    text-indent: 2em;
+    line-height: 26px;
+}
+.embranchment .embranchmentList .item .clearBoth .link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* margin-top: 35px; */
+    /* text-align: right; */
+}
+.embranchment .embranchmentList .item .clearBoth .link a{
+    display: block;
+    width: 118px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #D51717;
+    color: #D51717;
+    border-radius: 200px;
+}
+.embranchment .embranchmentList .item .itemRight .title a:hover{
+    color: #1a85cb;
+}
+.embranchment .embranchmentList .item .clearBoth .link a:hover{
+    background: #D51717;
+    color: #fff;
+}
+.embranchment .embranchmentList .item:hover{
+    background: #F8F8F8;
+}
+
+/* 分支机构详情 */
+.embranchmentDetail{
+}
+.embranchmentDetail .branch{
+    margin-bottom: 50px;
+}
+.embranchmentDetail .branch .branchLeft{
+    float: left;
+    width: 47%;
+    margin-right: 3%;
+}
+.embranchmentDetail .branch .branchLeft img{
+    width: 100%;
+}
+.embranchmentDetail .branch .branchRight{
+    float: left;
+    width: 50%;
+}
+.embranchmentDetail .branch .branchRight .title{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.embranchmentDetail .branch .branchRight .text{
+    color: #666;
+    text-indent: 2em;
+    line-height: 28px;
+}
+.embranchmentDetail .team{
+    position: relative;
+    margin-bottom: 50px;
+}
+.embranchmentDetail .team .title,.embranchmentDetail .contact .title{
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 36px;
+    background: url(../img/embranchmentBg.png) no-repeat left center;
+    padding-left: 35px;
+}
+.embranchmentDetail .team .title .Eg,.embranchmentDetail .contact .title .Eg{
+    font-size: 13px;
+    color: #666;
+}
+.embranchmentDetail .team .teamDetail{
+    overflow:hidden;
+}
+.embranchmentDetail .team .teamDetail .swiper-wrapper{
+    position: relative;
+    width: auto;
+    white-space: nowrap;
+}
+.embranchmentDetail .team .teamDetail .swiper-wrapper .swiper-slide{
+    display: inline-block;
+    width: 276px;
+    margin-right: 24px;
+    vertical-align: middle;
+}
+.embranchmentDetail .team .slideImg{
+    padding-top: 10px;
     background: #f3f3f3;
+}
+.embranchmentDetail .team .slideImg img{
+    max-width: 100%;
+    height: 383px;
+    display: block;
+    margin: 0 auto;
+}
+.embranchmentDetail .team .slideText{
+    padding: 20px 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.embranchmentDetail .team .slideText .name{
+    font-size: 18px;
+    font-weight: 700;
+}
+.embranchmentDetail .team .tools{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 25px;
+    margin-top: -12.5px;
+}
+.embranchmentDetail .team .tools .prevBtn{
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 27px;
+    height: 22px;
+    background: url(../img/prev.png) no-repeat center center;
+    cursor: pointer;
+}
+.embranchmentDetail .team .tools .nextBtn{
+    position: absolute;
+    right: -27.5px;
+    top: 0;
+    width: 27px;
+    height: 22px;
+    background: url(../img/next.png) no-repeat center center;
+    cursor: pointer;
+}
+.embranchmentDetail .contact{
+}
+.embranchmentDetail .contact .title{
+    padding-left: 25px;
+}
+.embranchmentDetail .contact .contactDetail .contactLeft{
+    float: left;
+    width: 50%;
+    padding-top: 80px;
+}
+.embranchmentDetail .contact .contactDetail .contactLeft p{
+    font-size: 15px;
+    line-height: 35px;
+    padding-left: 50px;
+}
+.embranchmentDetail .contact .contactDetail .contactLeft p.leftTitle{
+    font-size: 18px;
+    background: url(../img/mapPoint.png) no-repeat 4% center;
+    margin-bottom: 20px;
+}
+.embranchmentDetail .contact .contactDetail .contactLeft p.route{
+    background: url(../img/bus.png) no-repeat 8% center;
+    margin-top: 20px;
+    padding-left: 80px;
+    color: #1984C8;
+}
+.embranchmentDetail .contact .contactDetail .contactRight{
+    float: left;
+    width: 50%;
+}
+
+/* 商学 */
+.businessStudies{
+    margin-bottom: 60px;
+}
+.businessStudies .businessStudiesTitle{
+    text-indent: 2em;
+    line-height: 28px;
+    margin-bottom: 35px;
+}
+.businessStudies .studiesDetail{
+}
+.businessStudies .studiesDetail .item{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 15px;
+}
+.businessStudies .studiesDetail .item .itemImg{
+    padding: 15px;
+}
+.businessStudies .studiesDetail .item .itemImg img{
+    display: block;
+    width: 100%;
+}
+.businessStudies .studiesDetail .item .content{
+    display: block;
+    padding: 0 15px;
+}
+.businessStudies .studiesDetail .item .content .title{
+    font-size: 16px;
+    line-height: 50px;
+}
+.businessStudies .studiesDetail .item .content .title a:hover{
+    color: #1984c8;
+}
+.businessStudies .studiesDetail .item .content .text{
+    line-height: 26px;
+}
+.businessStudies .studiesDetail .item .content .link{
+    padding: 20px 0;
+    overflow: hidden;
+}
+.businessStudies .studiesDetail .item .content .link a{
+    float: right;
+    width: 88px;
+    height: 31px;
+    border: 1px solid #E15B5A;
+    line-height: 31px;
+    text-align: center;
+    color: #E15B5A;
+    border-radius: 5px;
+}
+.businessStudies .studiesDetail .item .content .link a:hover{
+    background: #E15B5A;
+    color: #fff;
 }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/presentation.css">
+    <title>华星介绍-荣誉奖项</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="./img/banner_servise.jpg" alt="">
+    </div>
+    
+    <div class="mainNav shang">
+        <ul>
+            <li>
+                <a class="navSelect action" href="javascript:void(0)">商学</a>
+                <ol>
+                    <li><a href="javascript:void(0)">课程</a></li>
+                    <li><a href="javascript:void(0)">辅导</a></li>
+                    <li><a href="javascript:void(0)">实践</a></li>
+                </ol>
+            </li>
+            <li><a href="javascript:void(0)">美育</a></li>
+            <li><a href="javascript:void(0)">传媒</a></li>
+        </ul>
+    </div>
+
+    <div class="breadcrumb">
+        <div class="inner">
+            您的位置：
+            <a href="javascript:void(0);">首页&nbsp;</a>&gt;&nbsp;
+            <a href="javascript:void(0);">产品服务&nbsp;</a>&gt;&nbsp;
+            <span>商学</span>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="inner">
+            <div class="businessStudies">
+                <div class="businessStudiesTitle">要实现华星人的理想，我们自己的成长学习、自我进化和迭代必不可少，只有持续化学习并主观拥抱变化和自我迭代才是永恒的核心。华星人在追求快乐工作的同时，也从来不敢停息，每天都以空杯心态不断地充实自己、训练自己。我认为活出精彩不仅靠运气，更重要的是自己的付出与努力。只有不断地自我成长，才能帮助整个行业更好的改变和成长，才能促进整个艺培行业的发展。促进艺培行业从教技能向美育教育回归，为美育艺培行业培养更多精英，让中国更多的孩子享受更好的艺术教育，通过帮助艺培机构的发展进而提升整个民族的素质教育水平，是华星不变的责任，我们将继续秉承“敬天修身·达人成己”的价值观，为艺术培训行业更美好的明天砥砺前行、全力以赴！</div>
+                <div class="studiesDetail">
+                    <div class="item">
+                        <div class="itemImg">
+                            <a href="javascript:void(0);">
+                                <img src="./img/serviceImg1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <div class="title"><a href="javascript:void(0);">课程</a></div>
+                            <div class="text">帮助众多艺培教育机构校长成功实现从专业教学强到专业办学强的角色转变，成为符合当下切尔奇无群撒阿斯达四大多</div>
+                            <div class="link">
+                                <a href="javascript:void(0);">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="itemImg">
+                            <a href="javascript:void(0);">
+                                <img src="./img/serviceImg2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <div class="title"><a href="javascript:void(0);">辅导</a></div>
+                            <div class="text">帮助众多艺培教育机构校长成功实现从专业教学强到专业办学强的角色转变，成为符合当下切尔奇无群撒阿斯达四大多</div>
+                            <div class="link">
+                                <a href="javascript:void(0);">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="itemImg">
+                            <a href="javascript:void(0);">
+                                <img src="./img/serviceImg3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <div class="title"><a href="javascript:void(0);">实践</a></div>
+                            <div class="text">帮助众多艺培教育机构校长成功实现从专业教学强到专业办学强的角色转变，成为符合当下切尔奇无群撒阿斯达四大多</div>
+                            <div class="link">
+                                <a href="javascript:void(0);">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearBoth"></div>
+                </div>
+            </div>
+            <div class="pageBar">
+                <ul>
+                    <li class="prevPage"><a href="javascript:void(0);">&lt;</a></li>
+                    <li class="action"><a href="javascript:void(0);">1</a></li>
+                    <li class=""><a href="javascript:void(0);">2</a></li>
+                    <li class=""><a href="javascript:void(0);">3</a></li>
+                    <li class=""><a href="javascript:void(0);">4</a></li>
+                    <li class=""><a href="javascript:void(0);">5</a></li>
+                    <li class="nextPage"><a href="javascript:void(0);">&gt;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/presentation.js"></script>
+    <script>
+        //计算商学列表中间项的margin
+        for(var i = 0; i < $(".studiesDetail .item").length; i++){
+            $(".studiesDetail .item").eq(2 * (parseInt(i / 3) + 1) + parseInt(i / 3) - 1 ).css({
+                "marginLeft": 22,
+                "marginRight":22
+            });
+        }
+        //限制商学的列表的内容字数
+        $(".businessStudies .studiesDetail .item").each(function(){
+            var str = $(this).find(".content .text").html();
+            $(this).find(".content .text").html( str.slice(0,40) + "..." );
+        });
+    </script>
+</body>
+</html>
