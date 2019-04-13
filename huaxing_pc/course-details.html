@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>课程列表</title>
+    <title>课程详情</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-1.9.1.min.js"></script>
 </head>
-<body>
+<body class="back_f5">
 <!--顶部导航-->
 <div class="top_nav">
     <div class="top_box clearfix">
@@ -183,10 +183,10 @@
 <div class="menu back_f5 text-center">
     <ul class="display-ib text-center clearfix">
         <li>
-            <a href="#">
+            <a href="#" class="act_m">
                 <p class="clearfix display-ib">
                     <span class="float_lf">商学</span>
-                    <img class="float_lf" src="img/down_icon.png" alt="">
+                    <img class="float_lf" src="img/down_blue.png" alt="">
                 </p>
             </a>
             <!--隐藏下拉-->
@@ -201,78 +201,94 @@
     </ul>
 </div>
 <!--面包屑-->
-<div class="crumb">
+<div class="crumb back_fff">
     <div class="max_wh">
-        <p>您的位置：<a href="#">首页</a> > <a href="#">产品服务</a> > <a href="#">商学</a> > <span>课程</span> </p>
+        <p>您的位置：<a href="#">首页</a> > <a href="#">产品服务</a> > <a href="#">商学</a> > <a href="#">课程</a> > <span>招生密码</span> </p>
     </div>
 </div>
-<!--列表-->
-<div class="course_list max_wh">
-    <ul class="clearfix">
-        <li>
-            <a href="#" class="clearfix">
-                <img width="100%" src="img/pro_img1.png" alt="">
-                <p class="txt-num1 course_tit">卓越校长盈利系统班</p>
-                <p class="txt-num2 course_con">帮助众多艺培教育机构校长成功实现从专业教学强到专业 办学强的角色转变，成为符合当下...</p>
-                <p class="look_a">查看详情</p>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="clearfix">
-                <img width="100%" src="img/pro_img2.png" alt="">
-                <p class="txt-num1 course_tit">卓越校长盈利系统班</p>
-                <p class="txt-num2 course_con">帮助众多艺培教育机构校长成功实现从专业教学强到专业 办学强的角色转变，成为符合当下...</p>
-                <p class="look_a">查看详情</p>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="clearfix">
-                <img width="100%" src="img/pro_img3.png" alt="">
-                <p class="txt-num1 course_tit">卓越校长盈利系统班</p>
-                <p class="txt-num2 course_con">帮助众多艺培教育机构校长成功实现从专业教学强到专业 办学强的角色转变，成为符合当下...</p>
-                <p class="look_a">查看详情</p>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="clearfix">
-                <img width="100%" src="img/pro_img4.png" alt="">
-                <p class="txt-num1 course_tit">卓越校长盈利系统班</p>
-                <p class="txt-num2 course_con">帮助众多艺培教育机构校长成功实现从专业教学强到专业 办学强的角色转变，成为符合当下...</p>
-                <p class="look_a">查看详情</p>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="clearfix">
-                <img width="100%" src="img/pro_img5.png" alt="">
-                <p class="txt-num1 course_tit">卓越校长盈利系统班</p>
-                <p class="txt-num2 course_con">帮助众多艺培教育机构校长成功实现从专业教学强到专业 办学强的角色转变，成为符合当下...</p>
-                <p class="look_a">查看详情</p>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="clearfix">
-                <img width="100%" src="img/pro_img6.png" alt="">
-                <p class="txt-num1 course_tit">卓越校长盈利系统班</p>
-                <p class="txt-num2 course_con">帮助众多艺培教育机构校长成功实现从专业教学强到专业 办学强的角色转变，成为符合当下...</p>
-                <p class="look_a">查看详情</p>
-            </a>
-        </li>
-    </ul>
-    <!--分页-->
-    <div class="pages_box max_wh text-center">
-        <ul class="display-ib clearfix">
-            <li class="page_back"><a href="#"><</a></li>
-            <li class="page_act"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li class="page_next"><a href="#">></a></li>
-        </ul>
+<!--课程详情-->
+<div class="course_details">
+    <div class="details_top back_fff">
+        <div class="max_wh clearfix">
+            <div class="course_img float_lf"><img width="100%" src="img/hot_img.png" alt=""></div>
+            <div class="course_main float_rt">
+                <p>招生密码</p>
+                <p>破解艺培机构招生困局</p>
+                <p>报名人数 &nbsp;&nbsp; 298人&nbsp;&nbsp; | &nbsp;&nbsp;综合评分 &nbsp;&nbsp;9.4</p>
+                <p class="clearfix"><span>课程目标：</span><span>启发经营管理思维，引发独立思考能力.</span></p>
+                <p class="clearfix"><span>课程特点：</span><span>内容精准-涵盖艺培机构的各个方面，每堂课程都是一个主题的深度解读。方便灵活-全国范围内循环开课。</span></p>
+                <div class="share clearfix">
+                    <div class="bdsharebuttonbox clearfix float_lf" data-tag="share_1">
+                        <label class="fenxiang float_lf">分享到:</label>
+                        <label class="baidushare float_lf">
+                            <a class="bds_weixin" data-cmd="weixin"></a>
+                            <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+                            <!--<a class="bds_mshare" data-cmd="mshare"></a>-->
+                            <a class="bds_tsina" data-cmd="tsina"></a>
+                            <a class="bds_baidu" data-cmd="baidu"></a>
+                            <a class="bds_renren" data-cmd="renren"></a>
+                            <a class="bds_tqq" data-cmd="tqq"></a>
+                            <a class="bds_more" data-cmd="more"></a>
+                        </label>
+                    </div>
+                    <a href="#" class="online_zx float_rt">在线咨询</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="max_wh">
+        <div class="details_bottom clearfix">
+            <div class="left_box float_lf">
+                <div class="main_item">
+                    <p>课程简介</p>
+                    <p>华星《招生密码》课程积累了华星团队近10年专注艺培服务的行业底蕴，实战招生386场，场场宣传达20万人以上，共计招生成单超38万，转化率达80%的成功经验，打磨出的一款针对解决艺培机构招生问题的实用课程，旨在帮助艺培机构校长明晰招生逻辑，掌握招生要领，打破招生困局，实现机构生生不息！</p>
+                </div>
+                <div class="main_item">
+                    <p>课程形式</p>
+                    <p>一天半的组会课程，由华星艺术教育商学院导师+招生实战导师授课，鲜活的全案解析+招生策略及留学生转化的实现路径，助力艺培机构打造完整招生体系。</p>
+                </div>
+                <div class="main_item">
+                    <p>学习对象</p>
+                    <p>对招生有强烈需求的艺术培训机构校长、股东、合伙人。</p>
+                    <p><img width="100%" src="img/course_img1.png" alt=""></p>
+                </div>
+                <div class="main_item">
+                    <p>课程内容</p>
+                    <p><img width="100%" src="img/course_img2.png" alt=""></p>
+                </div>
+            </div>
+            <div class="right_box float_rt">
+                <p>猜你喜欢</p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img width="100%" src="img/pro_img1.png" alt="">
+                            <p class="txt-num1">卓越校长盈利系统班</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img width="100%" src="img/pro_img2.png" alt="">
+                            <p class="txt-num1">卓越校长盈利系统班</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img width="100%" src="img/pro_img3.png" alt="">
+                            <p class="txt-num1">卓越校长盈利系统班</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img width="100%" src="img/pro_img4.png" alt="">
+                            <p class="txt-num1">卓越校长盈利系统班</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-
 
 
 
@@ -392,6 +408,42 @@
         $(this).children('a').removeClass('act_m').find('img').attr('src','img/down_icon.png');
         $(this).find('.hide_menu').hide();
     });
+
+    //百度分享
+    function baiduShare(){
+        var text = $("#wangzhi").text();
+        window._bd_share_config = {
+            common : {
+                bdText : "壹佰金世界地球日活动："+text,
+                bdDesc : "壹佰金世界地球日活动",
+                bdUrl : text
+            },
+            share : [{
+                "bdSize" : 16
+            }],
+            slide : [{
+                bdImg : 0,
+                bdPos : "right",
+                bdTop : 100
+            }],
+            image : [{
+                viewType : 'list',
+                viewPos : 'top',
+                viewColor : 'black',
+                viewSize : '20',
+                viewList : ['tsina','qzone','huaban','tqq','renren']
+            }],
+            selectShare : [{
+                "bdselectMiniList" : ['weixin','qzone','tqq','kaixin001','bdxc','tqf']
+            }]
+        };
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+
+    }
+
+    $(function(){
+        baiduShare();
+    })
 </script>
 </body>
 </html>
