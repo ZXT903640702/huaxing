@@ -35,15 +35,19 @@ body{
     float: left;
     width: 50%;
 }
+.main .mainCenter .mainContent .contentLeft img{
+    width: 100%;
+}
 .main .mainCenter .mainContent .contentRight{
     float: left;
     width: 45%;
     padding-left: 5%;
-    margin-top: -60px;
+    margin-top: -85px;
 }
 .main .mainCenter .mainContent .contentRight .mainTitle{
     font-size: 30px;
     text-align: center;
+    margin-bottom: 35px;
 }
 .main .mainCenter .mainContent .contentRight .mainTitle h3{
     font-weight: 400;
@@ -194,9 +198,6 @@ body{
     position: relative;
     padding-bottom: 60px;
 }
-/* .main .mainDetail .timerShaft .timerItem.last .itemText .itemContent{
-    padding-bottom: 100px;
-} */
 .main .mainDetail .timerShaft .timerItem.last .timerLogo{
     position: absolute;
     bottom: 0px;
@@ -554,7 +555,7 @@ body{
     margin-bottom: 22px;
 }
 .principal .principalItem:hover{
-    border-color: #f3f3f3;
+    border-color: #ddd;
 }
 .principal .principalItem .itemImg{
     width: 300px;
@@ -693,8 +694,6 @@ body{
     position: absolute;
     bottom: 0;
     right: 0;
-    /* margin-top: 35px; */
-    /* text-align: right; */
 }
 .embranchment .embranchmentList .item .clearBoth .link a{
     display: block;
@@ -894,6 +893,7 @@ body{
 }
 .businessStudies .studiesDetail .item .content .text{
     line-height: 26px;
+    color: #888;
 }
 .businessStudies .studiesDetail .item .content .link{
     padding: 20px 0;

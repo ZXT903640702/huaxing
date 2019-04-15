@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/swiper.min.css"> -->
     <link rel="stylesheet" href="css/presentation.css">
     <title>分支机构-华星艺术教育商学院辽宁分院</title>
 </head>
 <body>
+    <!-- banner部分 -->
     <div class="banner">
         <img src="./img/banner_presentation.jpg" alt="">
         <div class="bannerInner">
@@ -23,11 +23,12 @@
             </div>
         </div>
     </div>
-    
+    <!-- 导航 -->
     <div class="mainNav">
         <ul>
             <li>
                 <a class="navSelect" href="javascript:void(0)">华星介绍</a>
+                <!-- 二级导航 -->
                 <ol>
                     <li><a href="javascript:void(0)">企业历程</a></li>
                     <li><a href="javascript:void(0)">荣誉奖项</a></li>
@@ -45,7 +46,7 @@
             <li><a href="javascript:void(0)" class="action">分支机构</a></li>
         </ul>
     </div>
-
+    <!-- 面包屑导航 -->
     <div class="breadcrumb">
         <div class="inner">
             您的位置：
@@ -55,10 +56,11 @@
             <span>华星艺术教育商学院辽宁分院</span>
         </div>
     </div>
-    
+    <!-- 内容部分 -->
     <div class="main">
         <div class="inner">
             <div class="embranchmentDetail">
+                <!-- 分院介绍 -->
                 <div class="branch">
                     <div class="branchLeft">
                         <img src="./img/embranchmentImg1.jpg" alt="">
@@ -70,10 +72,12 @@
                     </div>
                     <div class="clearBoth"></div>
                 </div>
+                <!-- 团队介绍 -->
                 <div class="team">
                     <div class="title">团队介绍<span class="Eg">/TEAM INTRODUCTION</span></div>
                     <div class="teamDetail swiper-container">
                         <div class="swiper-wrapper">
+                            <!-- 团队介绍的每一项 -->
                             <div class="swiper-slide">
                                 <div class="slideImg">
                                     <img src="./img/principalImg1.png" alt="">
@@ -106,11 +110,13 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 上一个、下一个 -->
                     <div class="tools">
                         <div class="prevBtn"></div>
                         <div class="nextBtn"></div>
                     </div>
                 </div>
+                <!-- 联系方式 -->
                 <div class="contact">
                     <div class="title">联系方式<span class="Eg">/CONTACT INFORMATION</span></div>
                     <div class="contactDetail">
@@ -122,6 +128,7 @@
                             <p>地&nbsp;&nbsp;&nbsp;&nbsp;址：<span class="bold">沈阳市沈北道义经济开发区道义南大街37号</span></p>
                             <p class="route">公交路线：102路&nbsp;530路&nbsp;220路&nbsp;306路&nbsp;334路&nbsp;203路</p>
                         </div>
+                        <!-- 高德地图 -->
                         <div class="contactRight" id="map"></div>
                         <div class="clearBoth"></div>
                     </div>
@@ -131,29 +138,16 @@
     </div>
 
     <script src="./js/jquery-1.9.1.min.js"></script>
-    <!-- <script type="text/javascript" src="./js/swiper.min.js"></script> -->
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=efd17121f1b067a7f9d4f4bdce9fb161"></script> 
     <script src="./js/presentation.js"></script>
     <script>
         //分支机构详情的团队
-        // var mySwiper = new Swiper('.swiper-container', {
-        //     autoplay: true,
-        //     slidesPerView: 4,
-        //     observer:true,//修改swiper自己或子元素时，自动初始化swiper 
-        //     observeParents:true,//修改swiper的父元素时，自动初始化swiper 
-        //     spaceBetween: 20,
-        //     onSlideChangeEnd: function(swiper){ 
-        //         swiper.update(); //swiper更新
-        //     }
-        // });
-
-        //团队
         var positionLeft = 0;
         var teamLength = $(".teamDetail .swiper-slide").length;
         $(".prevBtn").on("click",function(){
             if(teamLength <= 4){
                 return;
-            }
+            };
             positionLeft--;
             if(positionLeft < 0){
                 positionLeft = teamLength - 2 - teamLength % 4;
@@ -161,14 +155,14 @@
             if(teamLength == 5){
                 if(positionLeft >= 2){
                     positionLeft = 1;
-                }
-            }
+                };
+            };
             $(".swiper-wrapper").stop().animate({"left":-positionLeft * 300},300);
         });
         $(".nextBtn").on("click",function(){
             if(teamLength <= 4){
                 return;
-            }
+            };
             positionLeft++;
             if(positionLeft >= teamLength - 1 - teamLength % 4){
                 positionLeft = 0;
@@ -176,21 +170,24 @@
             if(teamLength == 5){
                 if(positionLeft >= 2){
                     positionLeft = 0;
-                }
-            }
+                };
+            };
             $(".swiper-wrapper").stop().animate({"left":-positionLeft * 300},300);
         });
 
         // 分支机构详情的地图
         $(".embranchmentDetail .contact .contactDetail .contactRight").height($(".embranchmentDetail .contact .contactDetail .contactRight").width() * 0.7);
         var map = new AMap.Map('map',{
+            // 缩放级别
             zoom:16,
+            // 地图初始中心的经纬度，可以去 百度“高德地图经纬度查询” 搜索需要的位置
             center: [123.410574, 41.92446]
         });
         //给个标记
         var marker = new AMap.Marker({
-            position:[123.410574, 41.92446]
-        })
+            // 标记的经纬度
+            position: [123.410574, 41.92446]
+        });
         map.add(marker);
     </script>
 </body>
