@@ -350,25 +350,26 @@
 }
 .mainNav ul{
     width: 860px;
-    height: 48px;
+    height: 60px;
     margin: 0 auto;
 }
 .mainNav ul > li{
     position: relative;
     float: left;
-    width: 25%;
+    width: 23%;
     height: 100%;
     text-align: center;
+    margin: 0 1%;
 }
 .mainNav ul > li a{
     display: block;
 }
 .mainNav ul > li > a{
-    line-height: 46px;
+    line-height: 57px;
     border-bottom: 3px solid #f3f3f3;
 }
 .mainNav ul > li > a.navSelect{
-    background: url(../img/down_icon.png) no-repeat 72% center;
+    background: url(../img/presentation_down.png) no-repeat 72% center;
     background-size: 15px 15px;
 }
 .mainNav ul > li ol{
@@ -382,10 +383,10 @@
     border-bottom: 1px solid #e0e0e0;
 }
 .mainNav ul > li>a.navSelect:hover{
-    background-image: url(../img/down_icon_b.png);
+    background-image: url(../img/presentation_down_b.png);
 }
 .mainNav ul > li>a.navSelect.action{
-    background-image: url(../img/down_icon_b.png);
+    background-image: url(../img/presentation_down_b.png);
 }
 .mainNav ul > li a:hover,.mainNav ul > li a.action{
     color: #3399cc;
@@ -394,11 +395,18 @@
 .mainNav a.action{
     color: #3399cc;
 }
+.mainNav.shang ul{
+
+}
+.mainNav.shang ul > li{
+    width: 30%;
+    margin: 0 1.5%;
+}
 /***********************************面包屑***********************************/
 .breadcrumb{
     width: 100%;
     margin: 0 auto;
-    line-height: 42px;
+    line-height: 46px;
     color: #666;
     border-bottom: 1px solid #eee;
     margin-bottom: 90px;
@@ -424,14 +432,14 @@
     line-height: 60px;
 }
 .main .mainTitle p span{
-    position: absolute;
+    display: inline-block;
     width: 80px;
     height: 1px;
-    top: 50%;
     background: #ccc;
+    vertical-align: middle;
 }
 .main .mainTitle p span.lineL{
-    margin-left: -100px;
+    margin-right: 20px;
 }
 .main .mainTitle p span.lineR{
     margin-left: 20px;

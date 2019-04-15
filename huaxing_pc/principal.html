@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/presentation.css">
-    <title>关于华星-华星介绍</title>
+    <title>管理团队-分公司负责人</title>
 </head>
 <body>
     <div class="banner">
@@ -50,6 +50,7 @@
             您的位置：
             <a href="javascript:void(0);">首页&nbsp;</a>&gt;&nbsp;
             <a href="javascript:void(0);">关于华星&nbsp;</a>&gt;&nbsp;
+            <a href="javascript:void(0);">管理团队&nbsp;</a>&gt;&nbsp;
             <span>分公司负责人</span>
         </div>
     </div>
@@ -62,48 +63,30 @@
             </div>
             <div class="mainDetail">
                 <div class="principal">
-                    <div class="principalItem">
-                        <div class="hoverBox">
-                            <a class="itemDetail" href="javascript:void(0);">查看详情</a>
-                        </div>
+                    <a href="javascript:void(0);" class="principalItem">
                         <div class="itemImg"><img src="./img/principalImg1.png" alt=""></div>
                         <div class="itemText"><span class="name">顾金环</span>&nbsp;&nbsp;&nbsp;&nbsp;华星艺术教育商学院辽宁分院院长</div>
-                    </div>
-                    <div class="principalItem">
-                        <div class="hoverBox">
-                            <a class="itemDetail" href="javascript:void(0);">查看详情</a>
-                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="principalItem">
                         <div class="itemImg"><img src="./img/principalImg2.png" alt=""></div>
                         <div class="itemText"><span class="name">张&nbsp;&nbsp;媛</span>&nbsp;&nbsp;&nbsp;&nbsp;华星艺术教育商学院甘肃分院院长</div>
-                    </div>
-                    <div class="principalItem">
-                        <div class="hoverBox">
-                            <a class="itemDetail" href="javascript:void(0);">查看详情</a>
-                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="principalItem">
                         <div class="itemImg"><img src="./img/principalImg3.png" alt=""></div>
                         <div class="itemText"><span class="name">王&nbsp;&nbsp;坚</span>&nbsp;&nbsp;&nbsp;&nbsp;华星艺术教育商学院新疆分院院长</div>
-                    </div>
-                    <div class="principalItem">
-                        <div class="hoverBox">
-                            <a class="itemDetail" href="javascript:void(0);">查看详情</a>
-                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="principalItem">
                         <div class="itemImg"><img src="./img/principalImg1.png" alt=""></div>
                         <div class="itemText"><span class="name">顾金环</span>华星艺术教育商学院辽宁分院院长</div>
-                    </div>
-                    <div class="principalItem"亚洲教育影响力奖">
-                        <div class="hoverBox">
-                            <a class="itemDetail" href="javascript:void(0);">查看详情</a>
-                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="principalItem">
                         <div class="itemImg"><img src="./img/principalImg2.png" alt=""></div>
                         <div class="itemText"><span class="name">张&nbsp;&nbsp;媛</span>&nbsp;&nbsp;&nbsp;&nbsp;华星艺术教育商学院甘肃分院院长</div>
-                    </div>
-                    <div class="principalItem">
-                        <div class="hoverBox">
-                            <a class="itemDetail" href="javascript:void(0);">查看详情</a>
-                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="principalItem">
                         <div class="itemImg"><img src="./img/principalImg3.png" alt=""></div>
                         <div class="itemText"><span class="name">王&nbsp;&nbsp;坚</span>&nbsp;&nbsp;&nbsp;&nbsp;华星艺术教育商学院新疆分院院长</div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="pageBar">
@@ -121,5 +104,15 @@
     </div>
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/presentation.js"></script>
+    <script>
+        //计算分院负责人中间项的margin
+        for(var i = 0; i < $(".principal .principalItem").length; i++){
+            console.log(2 * (parseInt(i / 3) + 1) + parseInt(i / 3))
+            $(".principal .principalItem").eq(2 * (parseInt(i / 3) + 1) + parseInt(i / 3) - 1 ).css({
+                "marginLeft": 22,
+                "marginRight":22
+            });
+        }
+    </script>
 </body>
 </html>

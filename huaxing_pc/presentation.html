@@ -80,10 +80,22 @@
     <div class="videoBox">
         <div class="boxBg"></div>
         <div class="videoCont">
-            <video src="" id="video" controls></video>
+            <video src="http://tb-video.bdstatic.com/tieba-movideo/391199_08141a18da2bfd8ce181d6d1da38a3f6_0406ce8dc0c1.mp4" id="video" autoplay controls>
+                您的浏览器不支持video标签，请更换浏览器
+            </video>
         </div>
     </div>
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/presentation.js"></script>
+    <script>
+        $("#videoShow").on("click",function(){
+            $(".videoBox").show();
+            $("#video")[0].play();
+        });
+        $(".boxBg").on("click",function(){
+            $(".videoBox").hide();
+            $("#video")[0].pause();
+        });
+    </script>
 </body>
 </html>

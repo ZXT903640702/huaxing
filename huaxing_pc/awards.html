@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/presentation.css">
-    <title>关于华星-华星介绍</title>
+    <title>华星介绍-荣誉奖项</title>
 </head>
 <body>
     <div class="banner">
@@ -58,7 +58,7 @@
         <div class="inner">
             <div class="mainTitle">
                 <h3>荣誉奖项</h3>
-                <p><span class="lineL"></span>honorary award<span class="lineR"></span></p>
+                <p><span class="lineL"></span>HONORARY AWARD<span class="lineR"></span></p>
             </div>
             <div class="mainDetail">
                 <div class="awards">
@@ -168,5 +168,30 @@
 
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/presentation.js"></script>
+    <script>
+        //计算奖项中间项的margin
+        for(var i = 0; i < $(".awards .awardItem").length; i++){
+            console.log(2 * (parseInt(i / 3) + 1) + parseInt(i / 3))
+            $(".awards .awardItem").eq(2 * (parseInt(i / 3) + 1) + parseInt(i / 3) - 1 ).css({
+                "marginLeft": 22,
+                "marginRight":22
+            });
+        }
+        $(".awards").on("click",".awardItem .itemDetail",function(){
+            $(".awardPopUp").show();
+            var imgUrl = $(this).parents(".awardItem").attr("data-img");
+            var title = $(this).parents(".awardItem").attr("data-title");
+            var text = $(this).parents(".awardItem").attr("data-cont");
+            $(".awardPopUp .popCont .popImg img").attr("src",imgUrl);
+            $(".awardPopUp .popCont .popTitle").html(title);
+            $(".awardPopUp .popCont .popText").html(text);
+            $(".awardPopUp .popCont").css("marginTop", -$(".awardPopUp .popCont").outerHeight() / 2);
+        });
+        $(".awardPopUp .popBg,.awardPopUp .closePop").on("click",function(){
+            $(".awardPopUp").hide();
+        });
+        //计算奖项弹窗的margin
+        $(".awardPopUp .popCont").css("marginTop", -$(".awardPopUp .popCont").outerHeight() / 2);
+    </script>
 </body>
 </html>
