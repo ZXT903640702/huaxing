@@ -114,7 +114,9 @@
         //限制商学的列表的内容字数
         $(".businessStudies .studiesDetail .item").each(function(){
             var str = $(this).find(".content .text").html();
-            $(this).find(".content .text").html( str.slice(0,40) + "..." );
+            if(str.length > 40){
+                $(this).find(".content .text").html( str.slice(0,40) + "..." );
+            }
         });
     </script>
 </body>

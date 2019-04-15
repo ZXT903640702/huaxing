@@ -123,7 +123,9 @@
         //处理分支机构每一项的text的长度
         $(".embranchmentList .item").each(function(){
             var str = $(this).find(".itemRight .text").html();
-            $(this).find(".itemRight .text").html( str.slice(0,188) + "...");
+            if(str.length > 188){
+                $(this).find(".itemRight .text").html( str.slice(0,188) + "...");
+            };
         });
     </script>
 </body>

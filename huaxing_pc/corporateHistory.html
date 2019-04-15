@@ -131,5 +131,12 @@
 
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/presentation.js"></script>
+    <script>
+        $(".timerShaft .timerItem").each(function(){
+            if($(this).find(".itemContent p").length <= 1){
+                $(this).find(".itemText").css("paddingBottom",60);
+            };
+        });
+    </script>
 </body>
 </html>
