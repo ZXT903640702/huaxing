@@ -922,6 +922,438 @@
 .details_item p{
     line-height: 24px;
 }
+.kehu_box{
+    padding: 20px 0;
+}
+.kehu_box .kh_list{
+    width: 950px;
+}
+.kehu_box .kh_list .search_box{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.kehu_box .kh_list .search_box>p{
+    margin-top: 5px;
+}
+.kehu_box .kh_list .search_box .condition{
+    font-size:14px;
+    margin: 0 20px 0 20px;
+}
+.kehu_box .kh_list .search_box .condition>p{
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.kehu_box .kh_list .search_box .condition select{
+    border:0;
+    height: 30px;
+    color:#666;
+    line-height: 30px;
+    text-align: center;
+    outline: none;
+}
+.kehu_box .kh_list .search_box .condition select option{
+    color:#666;
+    text-align: center;
+}
+#date{
+    height: 30px;
+    line-height: 30px;
+}
+.kehu_box .kh_list .search_box #date input{
+    color:#666;
+    margin: 0 0 0 10px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+.zong_ji{
+    color:#666;
+    margin-top: 5px;
+}
+.kehu_box .kh_list > ul li{
+
+}
+.kehu_box .kh_list > ul li a{
+    display: block;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-bottom:1px solid #e5e5e5;
+}
+.kehu_box .kh_list > ul li a:hover{
+    background-color: #f5f5f5;
+}
+.kehu_box .kh_list > ul li a>img{
+    width: 360px;
+    height: 240px;
+}
+.kehu_box .kh_list > ul li a .ku_list_main{
+    width: 520px;
+}
+.ku_list_main .item_name{
+    font-size: 18px;
+    margin: 12px 0 20px 0;
+}
+.ku_list_main .item_txt{
+    color:#666;
+    font-size: 14px;
+    line-height: 26px;
+    text-indent: 2em;
+    height: 130px;
+    overflow: hidden;
+}
+.ku_list_main .item_bot p{
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.ku_list_main .item_bot p img{
+    float: left;
+    margin: 2px 8px 0 0;
+}
+.ku_list_main .item_bot p span{
+    display: inline-block;
+    float: left;
+    color:#666;
+}
+.ku_list_main .item_bot p:first-child+p+p{
+    margin-right: 0;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color:#d51716;
+    border-radius: 18px;
+    border:1px solid #d51716;
+    margin-top: 0;
+}
+.ku_list_main .item_bot p:first-child+p+p:hover{
+    color:#fff;
+    border:1px solid #d51716;
+    background-color: #d51716;
+}
+.hot_kc{
+    width: 220px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+.hot_kc>p{
+    font-size: 16px;
+}
+.hot_kc ul li{
+    margin-top: 10px;
+}
+.hot_kc ul li a{
+    display: block;
+}
+.hot_kc ul li a p{
+    font-size: 14px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border:1px solid #e5e5e5;
+}
+.kh_details{
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+.kh_details .details_title{
+    border-bottom: 1px solid #e5e5e5;
+}
+.kh_details .details_title .tit_h{
+    font-size: 22px;
+}
+.kh_details .details_title div:first-child+div{
+    margin: 15px 0;
+}
+.kh_details .details_title div p{
+    margin: 0 15px;
+}
+.kh_details .details_title div p img{
+    float: left;
+    margin: 3px 8px 0 0;
+}
+.kh_details .details_title div p span{
+    color:#666;
+    font-size: 12px;
+}
+.kh_details_main p{
+    display: block;
+    color:#666;
+    text-indent: 2em;
+    line-height: 26px;
+    margin: 20px auto 0 auto;
+}
+.kh_details_main p img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.hx_state{
+    padding: 40px 0;
+}
+.hx_state .hx_left{
+    width: 780px;
+}
+#hx_slider li a{
+    display: block;
+    position: relative;
+}
+#hx_slider li a p{
+    color:#fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 52px;
+}
+#hx_slider li a p span{
+    display: inline-block;
+    width: 80%;
+    height: 52px;
+    line-height: 52px;
+}
+#hx_slider .owl-controls {
+    margin: 0;
+}
+#hx_slider .owl-pagination {
+    position: absolute;
+    bottom:12px;
+    right:20px;
+}
+#hx_slider .owl-controls .owl-page span{
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+    background:#fff;
+}
+#hx_slider .owl-controls .active span{
+    width: 10px;
+    height: 10px;
+}
+#hx_slider .owl-controls .owl-buttons div{
+    position: absolute;
+    top:45%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 12px 0;
+    opacity: 1;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.6);
+}
+#hx_slider .owl-controls .owl-buttons div img{
+    width: 20px;
+    margin: 0 auto;
+}
+#hx_slider .owl-controls .owl-buttons .owl-prev{
+    left:15px;
+}
+#hx_slider .owl-controls .owl-buttons .owl-next{
+    right:15px;
+}
+.hx_left .state_list{
+    margin: 30px 0;
+}
+.hx_left .state_list .tab_ul {
+    border-bottom: 1px solid #e5e5e5;
+}
+.hx_left .state_list .tab_ul li{
+    float: left;
+    margin-right: 30px;
+}
+.hx_left .state_list .tab_ul li:hover,.li_hover{
+    border-bottom: 1px solid #1a85ca;
+    box-sizing: border-box;
+}
+.hx_left .state_list .tab_ul li a{
+    display: block;
+    font-size: 18px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+.hx_left .state_list .tab_list ul li{
+    border-bottom: 1px solid #e5e5e5;
+}
+.hx_left .state_list .tab_list ul li a{
+    display: block;
+    padding: 28px 0;
+}
+.hx_left .state_list .tab_list ul li a>img{
+    width: 240px;
+    height: 160px;
+}
+.hx_left .state_list .tab_list ul li a .item_txt{
+    width: 540px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.hx_left .state_list .tab_list ul li a .item_txt>p:first-child{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.hx_left .state_list .tab_list ul li a:hover .item_txt>p:first-child{
+    color:#1986c9;
+}
+.hx_left .state_list .tab_list ul li a .item_txt>p:first-child+p{
+    color:#666;
+    font-size: 14px;
+    line-height: 26px;
+    text-indent: 2em;
+}
+.hx_left .state_list .tab_list ul li a .item_txt div {
+    margin-top: 30px;
+}
+.hx_left .state_list .tab_list ul li a .item_txt div p{
+    margin-right: 30px;
+}
+.hx_left .state_list .tab_list ul li a .item_txt div p img{
+    float: left;
+    width: 12px;
+    margin: 2px 5px;
+}
+.hx_left .state_list .tab_list ul li a .item_txt div p span{
+    display: inline-block;
+    float: left;
+    color:#666;
+    font-size: 12px;
+}
+.hx_left .state_list .tab_list ul li a .item_txt div p:first-child+p span{
+    color:#999;
+}
+.loading a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color:#666;
+    margin: 30px auto 30px auto;
+    border-radius: 20px;
+    border:1px solid #ccc;
+}
+.hx_right{
+    width: 360px;
+}
+.hx_right .gongyi a{
+    display: block;
+    width: 360px;
+    height: 433px;
+}
+.hx_right .hot_kc{
+    width: 100%;
+    margin-top: 30px;
+}
+.hx_right .hot_kc ul li{
+    margin-top: 20px;
+}
+.hx_details .kh_details{
+    padding: 20px 20px 40px 20px;
+    background-color: #fff;
+    border-bottom: 1px dashed #e5e5e5;
+}
+.hx_details .kh_list{
+    width: 780px;
+}
+.hx_details .kh_details .details_title .tit_h{
+    font-size: 18px;
+}
+.hx_details_right ,.hx_details_right .gongyi,.hx_details_right .hot_kc{
+    width: 360px;
+}
+.hx_details_right .gongyi{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.hx_bot{
+    margin: 30px 0;
+}
+.hx_bot .biao_qian p{
+    margin-bottom: 10px;
+}
+
+.hx_bot .biao_qian p:first-child{
+    margin-bottom: 15px;
+}
+.hx_bot .biao_qian p a{
+    color:#666;
+}
+.hx_bot .biao_qian p:first-child a{
+    display: inline-block;
+    border:1px solid #e5e5e5;
+    padding: 0 5px;
+    box-sizing: border-box;
+    margin-left: 6px;
+    color:#999;
+    font-size: 14px;
+}
+.hx_bot .biao_qian p span{
+    color:#333;
+}
+.biao_qian .bdsharebuttonbox .fenxiang{
+    margin: 3px 10px 0 0;
+}
+.like_box{
+    margin: 30px auto;
+}
+.like_box .like_tit{
+    font-size: 16px;
+    padding-left: 6px;
+    line-height: 18px;
+    border-left:2px solid #1a85ca;
+}
+.like_box ul{
+    margin: 10px 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border:1px solid #e5e5e5;
+}
+.like_box ul li{
+    float: left;
+    width: 50%;
+}
+.like_box ul li span{
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 12px 10px 0 0;
+    float: left;
+}
+.like_box ul li a{
+    color:#666;
+    float: left;
+    display: block;
+    line-height: 28px;
+    width: 85%;
+}
+.like_box ul li a:hover{
+    color:#1a85ca;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
