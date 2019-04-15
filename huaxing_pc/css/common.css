@@ -378,6 +378,7 @@
     z-index: 999;
     background: #f3f3f3;
     overflow: hidden;
+    opacity: 0;
 }
 .mainNav ul > li ol > li{
     border-bottom: 1px solid #e0e0e0;

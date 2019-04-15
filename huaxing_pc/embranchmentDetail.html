@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/common.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/swiper.min.css"> -->
     <link rel="stylesheet" href="css/presentation.css">
-    <title>关于华星-分支机构</title>
+    <title>分支机构-华星艺术教育商学院辽宁分院</title>
 </head>
 <body>
     <div class="banner">
@@ -150,7 +150,6 @@
         //团队
         var positionLeft = 0;
         var teamLength = $(".teamDetail .swiper-slide").length;
-        console.log(teamLength - 1 - teamLength % 4)
         $(".prevBtn").on("click",function(){
             if(teamLength <= 4){
                 return;
@@ -160,7 +159,6 @@
                 positionLeft = teamLength - 2 - teamLength % 4;
             };
             if(teamLength == 5){
-                console.log(positionLeft)
                 if(positionLeft >= 2){
                     positionLeft = 1;
                 }
@@ -172,7 +170,6 @@
                 return;
             }
             positionLeft++;
-            console.log(positionLeft)
             if(positionLeft >= teamLength - 1 - teamLength % 4){
                 positionLeft = 0;
             };
