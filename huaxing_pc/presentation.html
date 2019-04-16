@@ -10,6 +10,7 @@
     <title>关于华星-华星介绍</title>
 </head>
 <body>
+    <!-- banner部分 -->
     <div class="banner">
         <img src="./img/banner_presentation.jpg" alt="">
         <div class="bannerInner">
@@ -22,11 +23,12 @@
             </div>
         </div>
     </div>
-    
+    <!-- 导航 -->
     <div class="mainNav">
         <ul>
             <li>
                 <a class="navSelect action" href="javascript:void(0)">华星介绍</a>
+                <!-- 二级导航 -->
                 <ol>
                     <li><a href="javascript:void(0)">企业历程</a></li>
                     <li><a href="javascript:void(0)">荣誉奖项</a></li>
@@ -44,7 +46,7 @@
             <li><a href="javascript:void(0)">分支机构</a></li>
         </ul>
     </div>
-
+    <!-- 面包屑导航 -->
     <div class="breadcrumb">
         <div class="inner">
             您的位置：
@@ -53,14 +55,16 @@
             <span>华星介绍</span>
         </div>
     </div>
-
+    <!-- 内容部分 -->
     <div class="main">
         <div class="mainCenter">
             <img src="./img/mainBg.jpg" class="mainBg" alt="">
             <div class="mainContent">
+                <!-- 视频按钮 -->
                 <div class="contentLeft" id="videoShow">
                     <img src="./img/videoImg.jpg" alt="">
                 </div>
+                <!-- 文字部分 -->
                 <div class="contentRight">
                     <div class="mainTitle">
                         <h3>华星介绍</h3>
@@ -76,7 +80,7 @@
             </div>
         </div>
     </div>
-
+    <!-- 视频弹框 -->
     <div class="videoBox">
         <div class="boxBg"></div>
         <div class="videoCont">
@@ -88,10 +92,12 @@
     <script src="./js/jquery-1.9.1.min.js"></script>
     <script src="./js/presentation.js"></script>
     <script>
+        //显示视频弹框
         $("#videoShow").on("click",function(){
             $(".videoBox").show();
             $("#video")[0].play();
         });
+        //隐藏视频弹框
         $(".boxBg").on("click",function(){
             $(".videoBox").hide();
             $("#video")[0].pause();

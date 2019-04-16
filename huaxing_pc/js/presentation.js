@@ -3,6 +3,7 @@ $(".navSelect").siblings("ol").each(function(){
     $(this).height(0);
 });
 $(".navSelect").on("mouseenter",function(){
+    $(this).siblings("ol").css("opacity",1);
     $(this).siblings("ol").stop().animate({height:$(this).siblings("ol").attr("data-h")},300);
 });
 $(".navSelect").parent("li").on("mouseleave",function(){
