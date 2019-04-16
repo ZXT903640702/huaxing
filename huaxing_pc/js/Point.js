@@ -1,13 +1,16 @@
 function Point(json){
     this.province = json.province;
     this.imgSrc = json.img;
+    this.flag = false;
     this.init();
 };
 Point.prototype.init = function(){
     var self = this;
     this.img = new Image();
     this.img.src = this.imgSrc;
-    this.img.onload = function(){
+    this.img.onload = function(e){
+        self.imgW = this.width;
+        self.imgH = this.height;
         self.changePosition();
     };
     map.pointArr.push(this);
@@ -157,7 +160,12 @@ Point.prototype.update = function(){
 };
 Point.prototype.render = function(){
     map.ctx.drawImage(map.pointImg, this.x - 11.5, this.y - 11.5 , 21,21);
+    map.ctx.save();
     map.ctx.font = "14px MicroSoft Yahei";
     map.ctx.fillStyle = "red";
     map.ctx.fillText(this.province , this.x + 13.5, this.y + 2.5);
+    map.ctx.restore();
+    if(this.flag){
+        map.ctx.drawImage(this.img, this.x - this.imgW/2, this.y - this.imgH - 20, this.imgW,this.imgH);
+    }
 };

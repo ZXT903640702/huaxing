@@ -30,6 +30,7 @@ Map.prototype.init = function(){
     };
 };
 Map.prototype.eventBind = function(){
+    var self = this;
     /* this.canvas.onclick = function(event){
         var rect = this.getBoundingClientRect();
         var x = event.clientX - rect.left * (this.width / rect.width);
@@ -41,6 +42,13 @@ Map.prototype.eventBind = function(){
         var rect = this.getBoundingClientRect();
         var x = event.clientX - rect.left * (this.width / rect.width);
         var y = event.clientY - rect.top * (this.height / rect.height);
+        for(var i = 0 ; i < self.pointArr.length; i++){
+            if(x > self.pointArr[i].x - 15 && x < self.pointArr[i].x + 63.5 && y > self.pointArr[i].y - 15 && y < self.pointArr[i].y + 23.5){
+                self.pointArr[i].flag = true;
+            }else{
+                self.pointArr[i].flag = false;
+            };
+        };
     };
 };
 Map.prototype.setTimer = function(){
