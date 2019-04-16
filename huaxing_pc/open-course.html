@@ -420,6 +420,9 @@
         },
         CreateSelectYear: function(showYearStart) {
             CalendarHandler.showYearStart=showYearStart;
+            $("#selectYearDiv").css("visibility","visible");
+            $("#selectMonthDiv").css("visibility","hidden");
+            $("#centerCalendarMain .dayItem").css("visibility","hidden");
             $(".currentDay").show();
             $("#selectYearDiv").children().remove();
             var yearindex = 0;
@@ -430,6 +433,7 @@
                     $("#selectYearDiv").append($last);
                     $last.click(function(){
                         CalendarHandler.CreateSelectYear(CalendarHandler.showYearStart-10);
+
                         dateEvent();
                     });
                     continue;
@@ -452,6 +456,9 @@
                 }
                 $("#selectYearDiv").append($yearItem);
                 $yearItem.click(function(){
+                    $("#selectYearDiv").css("visibility","hidden");
+                    $("#selectMonthDiv").css("visibility","hidden");
+                    $("#centerCalendarMain .dayItem").css("visibility","visible");
                     $calendarItem=CalendarHandler.CreateCalendar(Number($(this).html()),1,1);
                     $("#Container").append($calendarItem);
                     CalendarHandler.CSS()
@@ -478,6 +485,9 @@
         },
         CreateSelectMonth: function() {
             $(".currentDay").show();
+            $("#selectYearDiv").css("visibility","visible");
+            $("#centerCalendarMain .dayItem").css("visibility","hidden");
+            $("#selectMonthDiv").css("visibility","visible");
             $("#selectMonthDiv").children().remove();
             for (var i = 1; i < 13; i++) {
                 if (i == this.currentMonth) $monthItem=$("<div class=\"currentMontSd\" id=\"" + i + "\">" + i + "月</div>");
@@ -497,6 +507,9 @@
                     $("#centerMain").animate({
                         marginLeft: -$("#center").width() + "px"
                     }, 500);
+                    $("#selectYearDiv").css("visibility","hidden");
+                    $("#centerCalendarMain .dayItem").css("visibility","visible");
+                    $("#selectMonthDiv").css("visibility","hidden");
                     dateEvent();
                 });
                 if (i == 1 || i == 5 || i == 9) $("#selectMonthDiv").find("#" + i).css("border-left-color", "#fff");
@@ -671,6 +684,9 @@
             dateEvent();
         },
         CreateCurrentCalendar: function() {
+            $("#selectYearDiv").css("visibility","hidden");
+            $("#centerCalendarMain .dayItem").css("visibility","visible");
+            $("#selectMonthDiv").css("visibility","hidden");
             if (this.isRunning == false) {
                 $(".currentDay").hide();
                 $calendarItem = this.CreateCalendar(0, 0, 0);

@@ -1,4 +1,6 @@
-
+body{
+	overflow: hidden;
+}
 .timer{
 	width: 100%;
 	height: auto;
@@ -537,7 +539,7 @@
 	padding: 8px 10px;
 }
 .selectBtn:hover {
-	background-color: #00C7D3;
+	background-color: #1a85ca;
 	color: #fff;
 }
 .selectYear {
@@ -647,12 +649,12 @@
 	color: #009ad6;
 }
 #Container {
-	overflow: hidden;
+	/*overflow: hidden;*/
 	float: left;
 }
 #center {
 	width: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 #centerMain {
 	width: 320%;
@@ -660,6 +662,7 @@
 }
 #selectYearDiv {
 	float: left;
+	visibility: hidden;
 	background-color: #fff;
 }
 #selectYearDiv>div {
@@ -677,6 +680,7 @@
 }
 #selectMonthDiv {
 	float: left;
+	visibility: hidden;
 	background-color: #fff;
 }
 #selectMonthDiv>div {
@@ -979,21 +983,24 @@
 	box-sizing: border-box;
 }
 .alert_box{
-	width: 180px;
+	width: 200px;
 	padding: 15px;
 	box-sizing: border-box;
 	position: absolute;
-	top:84px;
-	left:0px;
+	top:74px;
+	left:-30%;
 	z-index: 100;
 	text-align: left;
 	display: none;
 	color:#333;
-	background-color: #fff;
-	box-shadow: 0 0 5px 2px #ccc;
+	background: url("../img/border_bg.png") no-repeat;
+	background-position: 0 -6px;
+	background-size: 100% 106%;
 }
 .alert_box .indiv{
-	margin-top: 15px;
+	/*margin-top: 15px;*/
+	padding: 10px 10px 0 10px;
+	box-sizing: border-box;
 }
 .alert_box .indiv:first-child{
 	margin-top: 0;
