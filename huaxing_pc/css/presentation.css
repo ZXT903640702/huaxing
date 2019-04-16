@@ -411,7 +411,7 @@ body{
     padding-left: 50px;
 }
 .main .page2 .inner .pageRight .text .colorRed{
-    color: #993333;
+    color: #b02728;
     font-weight: 700;
 }
 .main .page2 .inner .pageLeft{
@@ -420,6 +420,10 @@ body{
 }
 .main .page2 .inner .pageLeft .map{
     position: relative;
+}
+.main .page2 .inner .pageLeft .map canvas{
+    width: 709px;
+    height: 602px;
 }
 .main .page2 .inner .pageLeft .map span{
     position: absolute;
