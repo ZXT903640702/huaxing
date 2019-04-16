@@ -20,9 +20,7 @@ body{
     position: absolute;
     left: 0;
     top: 0;
-    width: 898px;
-    height: 595px;
-    margin-top: -10px;
+    margin-top: -50px;
     margin-left: -446px;
 }
 .main .mainCenter .mainContent{
@@ -513,19 +511,21 @@ body{
     margin-right: 5%;
 }
 .originator .oLeft .title{
-    font-size: 58px;
+    font-size: 60px;
     font-weight: 700;
     font-family: "SimSun";
+    color: #333;
 }
 .originator .oLeft .Eg{
-    font-size: 25px;
-    color: #1A85CB;
+    font-size: 26px;
+    color: #1a85ca;
     padding: 10px 0;
     margin-bottom: 10px;
 }
 .originator .oLeft .text{
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 100px;
+    color: #333;
 }
 .originator .oLeft .content{
     text-indent: 2em;
@@ -582,7 +582,7 @@ body{
 /* 分公司负责人详情 */
 .breadcrumb.principalDetail{
     margin-bottom: 0;
-    padding-bottom: 90px;
+    padding-bottom: 52px;
 }
 .principalDetail{
     background: #f0f0f0;
@@ -836,6 +836,9 @@ body{
     line-height: 35px;
     padding-left: 50px;
 }
+.embranchmentDetail .contact .contactDetail .contactLeft p .bold{
+    font-weight: 700;
+}
 .embranchmentDetail .contact .contactDetail .contactLeft p.leftTitle{
     font-size: 18px;
     background: url(../img/mapPoint.png) no-repeat 4% center;
@@ -853,6 +856,9 @@ body{
 }
 
 /* 商学 */
+.breadcrumb.service{
+    margin-bottom: 40px;
+}
 .businessStudies{
     margin-bottom: 60px;
 }

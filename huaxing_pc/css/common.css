@@ -422,15 +422,17 @@
 /***********************************公共title***********************************/
 .main .mainTitle{
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
 }
 .main .mainTitle h3{
     font-weight: 400;
+    color: #333;
 }
 .main .mainTitle p{
     position: relative;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 60px;
+    color: #666;
 }
 .main .mainTitle p span{
     display: inline-block;

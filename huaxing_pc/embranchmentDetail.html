@@ -124,8 +124,8 @@
                             <p class="leftTitle">华星艺术教育商学院辽宁分院</p>
                             <p>联系方式：<span class="bold">010-85738651</span></p>
                             <p>咨询QQ：<span class="bold">85738651</span></p>
-                            <p>邮&nbsp;&nbsp;&nbsp;&nbsp;箱：<span class="bold">85738651@qq.com</span></p>
-                            <p>地&nbsp;&nbsp;&nbsp;&nbsp;址：<span class="bold">沈阳市沈北道义经济开发区道义南大街37号</span></p>
+                            <p>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<span class="bold">85738651@qq.com</span></p>
+                            <p>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：<span class="">沈阳市沈北道义经济开发区道义南大街37号</span></p>
                             <p class="route">公交路线：102路&nbsp;530路&nbsp;220路&nbsp;306路&nbsp;334路&nbsp;203路</p>
                         </div>
                         <!-- 高德地图 -->
@@ -159,7 +159,8 @@
             };
             $(".swiper-wrapper").stop().animate({"left":-positionLeft * 300},300);
         });
-        $(".nextBtn").on("click",function(){
+        $(".nextBtn").on("click",nextImg);
+        function nextImg(){
             if(teamLength <= 4){
                 return;
             };
@@ -173,7 +174,11 @@
                 };
             };
             $(".swiper-wrapper").stop().animate({"left":-positionLeft * 300},300);
-        });
+        }
+        
+        setInterval(function(){
+            nextImg();
+        },3000);
 
         // 分支机构详情的地图
         $(".embranchmentDetail .contact .contactDetail .contactRight").height($(".embranchmentDetail .contact .contactDetail .contactRight").width() * 0.7);
