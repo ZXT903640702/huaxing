@@ -69,15 +69,16 @@
                 <!-- 左侧地图 -->
                 <div class="pageLeft">
                     <div class="map">
-                        <img src="./img/communityMap.jpg" alt="">
+                        <canvas id="myCanvas" width="709" height="602">您的浏览器不支持canvas</canvas>
+                        <!-- <img src="./img/communityMap.jpg" alt=""> -->
                         <!-- 每一个标点，data-src是鼠标放上出现的图 -->
-                        <span class="sichuan" data-src="./img/mapPopUp.png">四川</span>
+                        <!-- <span class="sichuan" data-src="./img/mapPopUp.png">四川</span>
                         <span class="guizhou" data-src="./img/mapPopUp.png">贵州</span>
                         <span class="xinjiang" data-src="./img/mapPopUp.png">新疆</span>
                         <span class="neimeng" data-src="./img/mapPopUp.png">内蒙古</span>
-                        <span class="gansu" data-src="./img/mapPopUp.png">甘肃</span>
+                        <span class="gansu" data-src="./img/mapPopUp.png">甘肃</span> -->
                         <!-- 弹出图 -->
-                        <i class="mapPopUp"><img src="" alt=""></i>
+                        <!-- <i class="mapPopUp"><img src="" alt=""></i> -->
                     </div>
                 </div>
                 <!-- 右侧文字 -->
@@ -115,23 +116,47 @@
     <script src="./js/echarts.min.js"></script>
     <script src="./js/china.js"></script>
     <script src="./js/presentation.js"></script>
+    <script src="./js/Map.js"></script>
+    <script src="./js/Point.js"></script>
     <script>
         //公益的地图
-        $(".map").on("mouseenter","span",function(){
-            var top = $(this).position().top;
-            var left = $(this).position().left;
-            var src = $(this).attr("data-src");
-            $(".map .mapPopUp img").attr("src",src);
-            $(".map .mapPopUp").css({
-                "display":"block",
-                "top" : top - 90,
-                "left": left - 30
-            });
+        // $(".map").on("mouseenter","span",function(){
+        //     var top = $(this).position().top;
+        //     var left = $(this).position().left;
+        //     var src = $(this).attr("data-src");
+        //     $(".map .mapPopUp img").attr("src",src);
+        //     $(".map .mapPopUp").css({
+        //         "display":"block",
+        //         "top" : top - 90,
+        //         "left": left - 30
+        //     });
+        // });
+        // $(".map").on("mouseleave","span",function(){
+        //     $(".map .mapPopUp").css({
+        //         "display":"none",
+        //     });
+        // });
+
+        var map = new Map();
+        new Point({
+            province: "四川",
+            img : "./img/mapPopUp.png"
         });
-        $(".map").on("mouseleave","span",function(){
-            $(".map .mapPopUp").css({
-                "display":"none",
-            });
+        new Point({
+            province: "贵州",
+            img : "./img/mapPopUp.png"
+        });
+        new Point({
+            province: "新疆",
+            img : "./img/mapPopUp.png"
+        });
+        new Point({
+            province: "内蒙古",
+            img : "./img/mapPopUp.png"
+        });
+        new Point({
+            province: "甘肃",
+            img : "./img/mapPopUp.png"
         });
     </script>
 </body>
