@@ -199,7 +199,7 @@
     <div class="kecheng_date float_lf">
         <p class="date_tit">公开课课程排期表</p>
         <div class="date_box">
-            <div id="Demo">
+            <div id="Demo" style="overflow: hidden;">
                 <div id="CalendarMain">
                     <div id="title"><a class="selectBtn month" href="javascript:;" onClick="CalendarHandler.CalculateLastMonthDays();"><</a><a class="selectBtn selectYear" href="javascript:" onClick="CalendarHandler.CreateSelectYear(CalendarHandler.showYearStart);">2014年</a><a class="selectBtn selectMonth" onClick="CalendarHandler.CreateSelectMonth()">6月</a> <a class="selectBtn nextMonth" href="javascript:" onClick="CalendarHandler.CalculateNextMonthDays();">></a><a class="selectBtn currentDay" href="javascript:" onClick="CalendarHandler.CreateCurrentCalendar(0,0,0);">今天</a></div>
                     <div id="context">
@@ -751,64 +751,66 @@
         }
     ];
     function dateEvent(){
-        var items = $(".dayItem .item input");
-        //遍历日历获取每天的隐藏域的值
-        for(var j=0; j<items.length;j++){
-            var y = $(items[j]).attr("y");
-            var m = $(items[j]).attr("m");
-            var d = $(items[j]).attr("d");
-            var time_num='';
-            if(m<10){
-                if(d<10){
-                    time_num = (y+"-0"+m+"-0"+d+" 00:00:00");
-                }else{
-                    time_num = (y+"-0"+m+"-"+d+" 00:00:00");
-                }
-
-            }else{
-                if(d<10){
-                    time_num = (y+"-"+m+"-0"+d+" 00:00:00");
-                }else{
-                    time_num = (y+"-"+m+"-"+d+" 00:00:00");
-                }
-            }
-            //将每个日期转换成时间戳
-            var times = Date.parse(new Date(time_num)).toString();
-            //截取去除毫秒000
-            times = times.substring(0,(times.length-3),4);
-
-            var alert_box = $("<div class='alert_box'></div>");
-
-            //遍历数据对比获取有数据的日期
-            for(var i=0;i<timeData.length;i++){
-                var stime = Number(timeData[i].starDate);
-                var etime = Number(timeData[i].endDate);
-                var name  = timeData[i].name;
-                // var s =timeData[i].state;
-
-                if(times>=stime && times<etime){
-                    console.log(times,stime,etime);
-                    if($(items[j]).siblings('.alert_box').length==0){
-                        $(items[j]).parent().append(alert_box);
+        setTimeout(function(){
+            var items = $(".dayItem .item input");
+            //遍历日历获取每天的隐藏域的值
+            for(var j=0; j<items.length;j++){
+                var y = $(items[j]).attr("y");
+                var m = $(items[j]).attr("m");
+                var d = $(items[j]).attr("d");
+                var time_num='';
+                if(m<10){
+                    if(d<10){
+                        time_num = (y+"/0"+m+"/0"+d+" 00:00:00");
+                    }else{
+                        time_num = (y+"/0"+m+"/"+d+" 00:00:00");
                     }
-                    var suc_div = $("<div class='suc_d txt-num1'>"+name+"</div>");
-                    var indev = $("<div class='indiv'>" +
-                        "<p class='txt-num1'>主&nbsp;&nbsp;题："+timeData[i].name+"</p>" +
-                        "<p>开课时间："+timeData[i].time+"</p>" +
-                        "<p>地&nbsp;&nbsp;点："+timeData[i].address+"</p>" +
-                        "</div>");
-                    $(items[j]).siblings('.alert_box').append(indev);
-                    $(items[j]).siblings('.add_box').append(suc_div);
-                    $(items[j]).siblings('a').addClass('dataShow');
+
+                }else{
+                    if(d<10){
+                        time_num = (y+"/"+m+"/0"+d+" 00:00:00");
+                    }else{
+                        time_num = (y+"/"+m+"/"+d+" 00:00:00");
+                    }
                 }
+                //将每个日期转换成时间戳
+                var times = Date.parse(new Date(time_num)).toString();
+                //截取去除毫秒000
+                times = times.substring(0,(times.length-3),4);
+
+                var alert_box = $("<div class='alert_box'></div>");
+
+
+                //遍历数据对比获取有数据的日期
+                for(var i=0;i<timeData.length;i++){
+                    var stime = Number(timeData[i].starDate);
+                    var etime = Number(timeData[i].endDate);
+                    var name  = timeData[i].name;
+                    if(times>=stime && times<etime){
+                        if($(items[j]).siblings('.alert_box').length==0){
+                            $(items[j]).parent().append(alert_box);
+                        }
+                        var suc_div = $("<div class='suc_d txt-num1'>"+name+"</div>");
+                        var indev = $("<div class='indiv'>" +
+                            "<p class='txt-num1'>主&nbsp;&nbsp;题："+timeData[i].name+"</p >" +
+                            "<p>开课时间："+timeData[i].time+"</p >" +
+                            "<p>地&nbsp;&nbsp;点："+timeData[i].address+"</p >" +
+                            "</div>");
+
+                        $(items[j]).siblings('.alert_box').append(indev);
+                        $(items[j]).siblings('.add_box').append(suc_div);
+                        $(items[j]).siblings('a').addClass('dataShow');
+                    }
+                }
+
             }
-        }
-        //点击每天获取挑战记录
-        $(".dayItem .item").hover(function(){
-            $(this).find(".alert_box").show();
-        },function(){
-            $(this).find(".alert_box").hide();
-        });
+            //点击每天获取挑战记录
+            $(".dayItem .item").hover(function(){
+                $(this).find(".alert_box").show();
+            },function(){
+                $(this).find(".alert_box").hide();
+            });
+        },200)
     }
 </script>
 </body>

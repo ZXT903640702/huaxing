@@ -3,33 +3,32 @@
 #banner{
     position: relative;
 }
-#banner .owl-controls{
+#banner .owl-dots{
     margin: 0;
 }
-#banner .owl-controls .owl-pagination{
+#banner .owl-dots{
     margin: 0 auto;
     position: absolute;
     bottom:10px;
     left:0;
     right:0;
 }
-#banner .owl-controls .owl-page span{
-    background: #fff;
-    margin: 5px 3px;
+#banner .owl-dots button span{
+    margin: 5px 4px;
 }
-#banner .owl-buttons{
+#banner .owl-nav{
     position: absolute;
     top:45%;
     width: 100%;
 }
-#banner .owl-buttons .owl-prev{
+#banner .owl-nav .owl-prev{
     position: absolute;
     top:45%;
     left:15%;
     opacity: 1;
     background: transparent !important;
 }
-#banner .owl-buttons .owl-next{
+#banner .owl-nav .owl-next{
     position: absolute;
     top:45%;
     right:15%;

@@ -421,11 +421,6 @@
             share : [{
                 "bdSize" : 16
             }],
-            slide : [{
-                bdImg : 0,
-                bdPos : "right",
-                bdTop : 100
-            }],
             image : [{
                 viewType : 'list',
                 viewPos : 'top',
@@ -438,12 +433,10 @@
             }]
         };
         with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-
+        window._bd_share_config.init();
     }
 
-    $(function(){
-        baiduShare();
-    })
+    window.onload = baiduShare();
 </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>华星教育</title>
-    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
@@ -920,29 +920,34 @@
         //轮播
         $(function(){
             $("#banner").owlCarousel({
-                autoPlay:3000,
+                items:1,
+                autoplay:true,
+                autoplayTimeout:3000,
+                loop:true,
                 singleItem:true,
                 stopOnHover:true,
-                navigation:true,
-                navigationText:["<img src='img/left.png'>","<img src='img/right.png'>"]
+                nav:true,
+                navText:["<img src='img/left.png'>","<img src='img/right.png'>"]
             });
             $("#expert_ul").owlCarousel({
                 items:5,
-                autoPlay:3000,
+                autoplay:true,
+                autoplayTimeout:3000,
                 singleItem:false,
                 stopOnHover:true,
                 pagination:false,
-                navigation:true,
-                navigationText:["<img src='img/jt_lf.png'>","<img src='img/jt_rt.png'>"]
+                nav:true,
+                navText:["<img src='img/jt_lf.png'>","<img src='img/jt_rt.png'>"]
             });
             $("#pinpai").owlCarousel({
                 items:3,
-                autoPlay:2500,
+                autoplay:true,
+                autoplayTimeout:2500,
                 singleItem:false,
                 stopOnHover:true,
                 pagination:false,
-                navigation:true,
-                navigationText:["<img src='img/left.png'>","<img src='img/right.png'>"]
+                nav:true,
+                navText:["<img src='img/left.png'>","<img src='img/right.png'>"]
             });
         })
 
