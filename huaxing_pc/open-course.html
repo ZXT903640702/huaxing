@@ -421,10 +421,12 @@
         },
         CreateSelectYear: function(showYearStart) {
             CalendarHandler.showYearStart=showYearStart;
-            $("#selectYearDiv").css("visibility","visible");
             $("#selectMonthDiv").css("visibility","hidden");
             $("#centerCalendarMain .dayItem").css("visibility","hidden");
             $(".currentDay").show();
+            setTimeout(function(){
+                $("#selectYearDiv").css("visibility","visible");
+            },300);
             $("#selectYearDiv").children().remove();
             var yearindex = 0;
             for (var i = showYearStart; i < showYearStart+12; i++) {
@@ -472,7 +474,7 @@
                     });
                     $("#centerMain").animate({
                         marginLeft: -$("#center").width() + "px"
-                    }, 500);
+                    }, 100);
                 });
                 if (yearindex == 1 || yearindex == 5 || yearindex == 9) $("#selectYearDiv").find("#" + yearindex).css("border-left-color", "#fff");
                 if (yearindex == 4 || yearindex == 8 || yearindex == 12) $("#selectYearDiv").find("#" + yearindex).css("border-right-color", "#fff");
@@ -486,10 +488,12 @@
         },
         CreateSelectMonth: function() {
             $(".currentDay").show();
-            $("#selectYearDiv").css("visibility","visible");
             $("#centerCalendarMain .dayItem").css("visibility","hidden");
-            $("#selectMonthDiv").css("visibility","visible");
             $("#selectMonthDiv").children().remove();
+            setTimeout(function(){
+                $("#selectYearDiv").css("visibility","visible");
+                $("#selectMonthDiv").css("visibility","visible");
+            },300);
             for (var i = 1; i < 13; i++) {
                 if (i == this.currentMonth) $monthItem=$("<div class=\"currentMontSd\" id=\"" + i + "\">" + i + "月</div>");
                 else  $monthItem=$("<div id=\"" + i + "\">" + i + "月</div>");
@@ -507,10 +511,12 @@
                     });
                     $("#centerMain").animate({
                         marginLeft: -$("#center").width() + "px"
-                    }, 500);
+                    }, 0);
                     $("#selectYearDiv").css("visibility","hidden");
-                    $("#centerCalendarMain .dayItem").css("visibility","visible");
                     $("#selectMonthDiv").css("visibility","hidden");
+                    setTimeout(function(){
+                        $("#centerCalendarMain .dayItem").css("visibility","visible");
+                    },1000);
                     dateEvent();
                 });
                 if (i == 1 || i == 5 || i == 9) $("#selectMonthDiv").find("#" + i).css("border-left-color", "#fff");
@@ -519,7 +525,7 @@
             $("#selectMonthDiv>div").css("width", ($("#center").width() - 4) / 4 + "px").css("line-height", ($("#center").height() - 4) / 3 + "px");
             $("#centerMain").animate({
                 marginLeft: -$("#center").width() * 2 + "px"
-            }, 300);
+            }, 100);
             dateEvent();
         },
         IsRuiYear: function(aDate) {
@@ -702,7 +708,7 @@
                 this.CSS();
                 $("#centerMain").animate({
                     marginLeft: -$("#center").width() + "px"
-                }, 500);
+                }, 100);
             }
             dateEvent();
         },
@@ -804,9 +810,37 @@
                 }
 
             }
-            //点击每天获取挑战记录
+            //
             $(".dayItem .item").hover(function(){
                 $(this).find(".alert_box").show();
+                var item = $(".dayItem .item");
+                for(var i=0;i<item.length;i++){
+                    if($(this).index() == i*7){
+                        $(this).find(".alert_box").css('left','-8px');
+                    }else if($(this).index() == (i*7-1)){
+                        $(this).find(".alert_box").css({
+                            left:'auto',
+                            right:'-4px'
+                        });
+                    }else if($(this).index()>=28){
+                        if($(this).index()==34){
+                            $(this).find(".alert_box").css({
+                                left:'auto',
+                                right:'-4px',
+                                top:'-105px'
+                            });
+                        }else{
+                            $(this).find(".alert_box").css({
+                                left:'-8px',
+                                top:'-105px'
+                            });
+                        }
+                        $(this).find(".alert_box").css("background","url(img/border_bg2.png) 0 -6px no-repeat");
+                        $(this).find(".alert_box").css("background-size","100% 111%");
+                        $(this).find(".indiv").css("padding","0 10px 0 10px");
+                    }
+
+                }
             },function(){
                 $(this).find(".alert_box").hide();
             });
